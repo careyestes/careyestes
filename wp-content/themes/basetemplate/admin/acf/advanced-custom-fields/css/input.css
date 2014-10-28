@@ -1,248 +1,429 @@
 /*---------------------------------------------------------------------------------------------
 *
-*  Post Box
-*
-*---------------------------------------------------------------------------------------------*/
-
-.acf-hidden {
-	display: none !important;
-}
-
-.acf_postbox {
-	display: block;
-}
-
-.acf_postbox .inside,
-#poststuff .acf_postbox .inside {
-	margin: 0;
-	padding: 0;
-}
-
-.acf_postbox.no_box {
-	border: 0 none;
-	background: transparent;
-	box-shadow: none;
-}
-
-.acf_postbox.no_box > h3,
-.acf_postbox.no_box > .handlediv {
-	display: none;
-}
-
-.acf_postbox.no_box.closed .inside {
-	display: block;
-}
-
-.acf_postbox .widefat th, 
-.acf_postbox .widefat td {
-	overflow: visible;
-}
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*  Field
-*
-*---------------------------------------------------------------------------------------------*/
-
-.acf_postbox .field {
-	position: relative;
-	color: #333333;
-}
-
-.acf_postbox > .inside > .field {
-	padding: 15px 10px;
-	border-top: #e8e8e8 solid 1px;
-}
-
-.acf_postbox > .inside > .field:first-child {
-	border-top: none;
-}
-
-.acf_postbox.no_box > .inside > .field { 
-    border-top: 0 none;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
-/* Field Error */
-.acf_postbox .field.error {
-	border: #CC0000 solid 1px !important;
-	background: #FFEBE8 !important;
-}
-
-.acf_postbox .field .acf-error-message {
-	display: none;
-	position: relative;
-	
-	background: #CC0000;
-	color: #fff;
-	text-shadow: none;
-	
-	border-radius: 3px;
-	padding: 5px 10px;
-	
-	font-size: 12px;
-	line-height: 14px;
-	
-	margin: 5px 0 0;
-}
-
-.acf_postbox .field .acf-error-message .bit {
-	width: 0;
-	height: 0;
-	border: transparent 5px solid;
-	border-bottom-color: #CC0000;
-	
-	display: block;
-	position: absolute;
-	top: -10px;
-	left: 10px;
-}
-
-.acf_postbox .field.error .acf-error-message {
-	display: inline-block;
-}
-
-.acf_postbox .field.error label.field_label {
-	color: #CC0000;
-}
-
-.acf_postbox.no_box > .inside > .field.error { 
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.acf_postbox > .inside > .field.error + .field.error {
-	border-top: 0 none !important;
-}
-
-
-
-
-/* Field Label */
-.acf_postbox p.label {
-	font-size: 12px;
-	line-height: 1.5em;
-	margin: 0 0 1em;
-	padding: 0;
-	color: #666666;
-	text-shadow: 0 1px 0 #FFFFFF;
-}
-
-.acf_postbox p.label label {
-	color: #333333;
-    font-size: 13px;
-    line-height: 1.5em;
-    font-weight: bold;
-    padding: 0;
-    margin: 0 0 3px;
-    display: block;
-    vertical-align: text-bottom;
-}
-
-.acf_postbox .field.required label span.required {
-	color: #CC0000;
-}
-
-.acf_postbox label.field_label:first-child {
-	padding-top: 0;
-}
-
-.acf_postbox .field_type-message p.label {
-	display: none !important;
-} 
-
-/*---------------------------------------------------------------------------------------------
-*
 *  Basic Field Styles
 *
 *---------------------------------------------------------------------------------------------*/
 
-.acf_postbox .field input[type="text"],
-.acf_postbox .field input[type="number"],
-.acf_postbox .field input[type="password"],
-.acf_postbox .field input[type="email"],
-.acf_postbox .field textarea{
-	width: 100%;
-	padding: 5px;
+.acf-field input[type="text"], 
+.acf-field input[type="password"], 
+.acf-field input[type="number"], 
+.acf-field input[type="search"], 
+.acf-field input[type="email"], 
+.acf-field input[type="url"], 
+.acf-field textarea,
+.acf-field select {
+    width: 100%;
+	padding: 3px 5px;
 	resize: none;
 	margin: 0;
+    box-sizing: border-box;
+    
+    font-size: 14px;
+    line-height: 15px;
 }
 
-.acf_postbox .field textarea {
+.acf-field textarea {
 	resize: vertical;
-	min-height: 150px;
-}
-
-.acf_postbox .field select{
-	width: 100%;
-	padding: 2px;
-	resize: none;
-}
-
-.acf_postbox .field select optgroup {
-	padding: 5px;
-	background: #fff;
-}
-
-.acf_postbox .field select option {
-	padding: 3px;
-}
-
-.acf_postbox .field select optgroup option {
-	padding-left: 5px;
-}
-
-.acf_postbox .field select optgroup:nth-child(2n) {
-    background: #F9F9F9;
+	line-height: 1.4em;
 }
 
 
 /*---------------------------------------------------------------------------------------------
 *
-*  Field: WYSIWYG
+*  Text
 *
 *---------------------------------------------------------------------------------------------*/
 
-.acf_wysiwyg {
+.acf-input-prepend,
+.acf-input-append {
+	font-size: 13px;
+	line-height: 19px;
+	height: 20px;
+	
+	padding: 3px 7px;
+	
+	background: #F4F4F4;
+	border: #DFDFDF solid 1px;
+}
+
+.acf-input-prepend {
+	float: left;
+	border-right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.acf-input-append {
+	float: right;
+	border-left: 0;
+	border-radius: 0 3px 3px 0;
+}
+
+.acf-input-wrap {
+	position: relative;
+	overflow: hidden;
+}
+
+.acf-input-wrap input {
+	height: 28px;
+	margin: 0;
+}
+
+input.acf-is-prepended {
+	border-radius: 0 3px 3px 0 !important;
+}
+
+input.acf-is-appended {
+	border-radius: 3px 0 0 3px !important;
+}
+
+input.acf-is-prepended.acf-is-appended {
+	border-radius: 0 !important;
+}
+
+
+/*---------------------------------------------------------------------------------------------
+*
+*  Url
+*
+*---------------------------------------------------------------------------------------------*/
+
+.acf-url {
 	
 }
 
-.acf_wysiwyg .wp_themeSkin table.mceToolbarRow1 {
-    margin-top: 2px !important;
+.acf-url i {
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	opacity: 0.5;
 }
 
-.acf_wysiwyg iframe{ 
-	min-height: 250px;
+.acf-url.valid i {
+	opacity: 1;
 }
 
-.acf_wysiwyg .wp-editor-container {
+.acf-url input[type="url"] {
+	padding-left: 25px;
+}
+
+/*---------------------------------------------------------------------------------------------
+*
+*  Select
+*
+*---------------------------------------------------------------------------------------------*/
+
+.acf-field select {
+	padding: 2px;
+}
+
+.acf-field select optgroup {
+	padding: 5px;
 	background: #fff;
-	border-color: #CCCCCC #CCCCCC #DFDFDF;
-    border-style: solid;
-    border-radius: 3px 3px 0 0;
-    border-width: 1px;
 }
 
-/*
+.acf-field select option {
+	padding: 3px;
+}
 
-not needed in WP 3.8
+.acf-field select optgroup option {
+	padding-left: 5px;
+}
 
-.acf_wysiwyg .mceStatusbar {
+.acf-field select optgroup:nth-child(2n) {
+    background: #F9F9F9;
+}
+
+.acf-field .select2-input {
+	max-width: 200px;
+}
+
+/*---------------------------------------------------------------------------------------------
+*
+*  Radio
+*
+*---------------------------------------------------------------------------------------------*/
+
+ul.acf-radio-list,
+ul.acf-checkbox-list {
+	background: transparent !important;
 	position: relative;
+	padding: 1px;
+	margin: 0;
 }
 
-.acf_wysiwyg .mceStatusbar  a.mceResize {
-	top: -2px !important;
+ul.acf-radio-list li,
+ul.acf-checkbox-list li {
+	font-size: 13px;
+	line-height: 22px;
+	margin: 0;
+	position: relative;
+	word-wrap: break-word;
 }
-*/
+
+ul.acf-hl.acf-radio-list li,
+ul.acf-hl.acf-checkbox-list li {
+	margin-right: 20px;
+	clear: none;
+}
+
+ul.acf-radio-list li input,
+ul.acf-checkbox-list li input {
+	margin: -1px 4px 0 0;
+	width: auto !important;
+	vertical-align: middle;
+}
+
+ul.acf-radio-list li label,
+ul.acf-checkbox-list li label {
+	display: inline;
+	margin: 2px 0;
+}
+
+/*--------------------------------------------------------------------------
+*
+*	Google Map
+*	
+*-------------------------------------------------------------------------*/
+
+.acf-google-map {
+	position: relative;
+	border: #DFDFDF solid 1px;
+	background: #fff;
+}
+
+.acf-google-map .title {
+	position: relative;
+	border-bottom: #DFDFDF solid 1px;
+	padding: 5px 10px;
+}
+
+.acf-google-map .has-value { display: none; }
+.acf-google-map .no-value { display: block; }
+
+.acf-google-map.active .has-value { display: block; }
+.acf-google-map.active .no-value { display: none; }
+
+.acf-google-map .title h4,
+.acf-google-map .title input[type="text"] {
+	margin: 0;
+	font-size: 14px;
+	line-height: 30px;
+	height: 30px;
+	padding: 0;
+	border: 0 none;
+	box-shadow: none;
+	border-radius: 0;
+	font-family: inherit;
+	cursor: text;
+}
+
+.acf-google-map .title .acf-icon {
+	right: 7px;
+	top: 6px;
+	position: absolute;
+}
+
+.acf-google-map .canvas {
+	height: 400px;
+}
+
+.pac-container {
+	margin-left: -1px;
+	margin-top: -1px;
+	padding: 5px 0;
+	border-color: #DFDFDF;
+}
+
+.pac-container:after {
+	display: none;
+}
+
+.pac-container .pac-item {
+	padding: 5px;
+	margin: 0 5px;
+}
 
 
-/*
-*  WP 3.5 z-index fix for full screen wysiwyg
-*/
+/*--------------------------------------------------------------------------
+*
+*	Relationship
+*	
+*-------------------------------------------------------------------------*/
+
+.acf-relationship {
+	
+}
+
+.acf-relationship .filters {
+	border: #DFDFDF solid 1px;
+	background: #fff;
+}
+
+.acf-relationship .filters li {
+	
+}
+
+.acf-relationship .filters li input,
+.acf-relationship .filters li select {
+	height: 28px;
+    line-height: 28px;
+	padding: 2px;	
+}
+
+.acf-relationship .filters li input {
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.acf-relationship .filters li .inner {
+	padding: 7px 7px 7px 0;
+	margin: 0;
+}
+
+.acf-relationship .filters li:first-child .inner {
+	padding-left: 5px;
+}
+
+.acf-relationship .filters .filter {
+	margin: 0;
+	float: none;
+}
+
+.acf-relationship .filters .filter:focus,
+.acf-relationship .filters .filter:active {
+	outline: none;
+	box-shadow: none;
+}
+
+.acf-relationship .selection {
+	border: #DFDFDF solid 1px;
+	position: relative;
+	margin-top: -1px;
+}
+
+.acf-relationship .values,
+.acf-relationship .choices {
+	width: 50%;
+	background: #fff;
+	float: left
+}
+
+.acf-relationship .choices {
+	background: #F9F9F9;
+}
+
+.acf-relationship .choices .list {
+	border-right: #DFDFDF solid 1px;
+}
+
+.acf-relationship .list {
+	margin: 0;
+	padding: 5px;
+	height: 160px;
+	overflow: auto;
+}
+
+.acf-relationship .list .acf-rel-label,
+.acf-relationship .list .acf-rel-item,
+.acf-relationship .list p {
+	padding: 5px 7px;
+	margin: 0;
+	display: block;
+	position: relative;
+	min-height: 18px;
+}
+
+.acf-relationship .list ul {
+	padding-bottom: 5px;
+}
+
+.acf-relationship .list ul .acf-rel-item{
+	padding-left: 20px;
+}
+
+.acf-relationship .list .acf-rel-label {
+	font-weight: bold;
+}
+
+.acf-relationship .list .acf-rel-item {
+	color: #333;
+	cursor: pointer;
+}
+
+.acf-relationship .values .list .acf-rel-item {
+	cursor: move;
+}
+
+.acf-relationship .acf-rel-item b {
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+.acf-relationship .values .acf-rel-item b {
+	text-decoration: none;
+}
+
+.acf-relationship .acf-rel-item .thumbnail {
+	background: #DFDFDF;
+	width: 17px;
+	height: 17px;
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+.acf-relationship .acf-rel-item .thumbnail img {
+	width: 17px;
+	height: 17px;
+}
+
+.acf-relationship .acf-rel-item:hover {
+	background: #3875D7;
+	color: #fff;
+}
+
+.acf-relationship .values .acf-icon {
+	position: absolute;
+	top: 4px;
+	right: 7px;
+	display: none;
+}
+
+.acf-relationship .values .acf-rel-item:hover .acf-icon {
+	display: block;
+}
+
+
+/* disabled */
+.acf-relationship .acf-rel-item.disabled {
+	opacity: 0.5;
+}
+
+.acf-relationship .acf-rel-item.disabled:hover {
+	opacity: 0.5;
+	background: transparent;
+	color: #333;
+	cursor: default;
+}
+
+
+/*--------------------------------------------------------------------------
+*
+*	WYSIWYG
+*	
+*-------------------------------------------------------------------------*/
+
+.acf-wysiwyg-wrap {
+	
+}
+
+.acf-wysiwyg-wrap iframe{ 
+	min-height: 200px;
+}
+
+.acf-wysiwyg-wrap .wp-editor-container{ 
+	border: 1px solid #E5E5E5;
+	box-shadow: none;
+}
 
 #mce_fullscreen_container {
 	z-index: 150005 !important;
@@ -251,33 +432,271 @@ not needed in WP 3.8
 
 /*---------------------------------------------------------------------------------------------
 *
-*  Field: Image
+*	Tab
 *
 *---------------------------------------------------------------------------------------------*/
+
+.acf-field.field_type-tab {
+	display: none !important;
+}
+
+.acf-tab-group {
+	background: transparent;
+	border-bottom: #CCCCCC solid 1px;
+	margin: 0 0 10px;
+	padding: 10px 2px 0 0;
+}
+
+.acf-tab-group li {
+	font-family: "Open Sans",sans-serif;
+	font-size: 23px;
+    line-height: 29px;
+    margin: 0 8px 0 0;
+    
+}
+
+.acf-tab-group li a {
+	padding: 6px 10px;
+	display: block;
+	
+	color: #555555;
+	font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    
+    border: #CCCCCC solid 1px;
+    border-bottom: 0 none;
+    text-decoration: none;
+    background: #E4E4E4;
+    
+}
+
+.acf-tab-group li a:hover, 
+.acf-tab-group li.active a {
+    background: #FFFFFF;
+    outline: none;
+}
+
+.acf-tab-group li.active a {
+	background: #F1F1F1;
+	color: #000;
+	border-color: #CCCCCC;
+    border-bottom-color: #F7F7F7;
+    padding-bottom: 7px;
+    margin-bottom: -1px;
+}
+
+.hidden-by-tab {
+	display: none !important;
+}
+
+.acf-postbox .acf-tab-wrap:first-child .acf-tab-group {
+	border-top: 0 none;
+}
+
+.compat-item .acf-tab-wrap td {
+	display: block;
+}
+
+/*
+*  Box
+*/
+
+.acf-postbox.default .acf-tab-group {
+	padding-left: 10px;
+	background: #F9F9F9;
+	border-top: #E8E8E8 solid 1px;
+	border-bottom: #E8E8E8 solid 1px;
+	margin-bottom: -1px;
+}
+
+.acf-postbox.default .acf-tab-group li a {
+    background: #F1F1F1;
+}
+
+.acf-postbox.default .acf-tab-group li.active a {
+	background: #FFFFFF;
+}
+
+
+/*
+*  Box (label left)
+*/
+
+.acf-table tr.acf-tab-wrap td {
+	padding: 0;
+	background: #F9F9F9;
+	border-top: none;
+	border-bottom: none;
+}
+
+.acf-table tr.acf-tab-wrap td .acf-tab-group {
+	margin-bottom: -1px;
+	padding-left: 24%;
+}
+
+/* media popup & gallery field fix */
+.acf-table .form-table tr.acf-tab-wrap td .acf-tab-group {
+	margin-bottom: 10px;
+	padding-left: 0;
+}
+
+
+/*--------------------------------------------------------------------------------------------
+*
+*	oembed
+*
+*--------------------------------------------------------------------------------------------*/
+
+.acf-oembed {
+	position: relative;
+	border: #DFDFDF solid 1px;
+	background: #fff;
+}
+
+.acf-oembed .title {
+	position: relative;
+	border-bottom: #DFDFDF solid 1px;
+	padding: 5px 10px;
+}
+
+.acf-oembed .title h4,
+.acf-oembed .title input[type="text"] {
+	margin: 0;
+	font-size: 14px;
+	line-height: 30px;
+	height: 30px;
+	padding: 0;
+	border: 0 none;
+	box-shadow: none;
+	border-radius: 0;
+	font-family: inherit;
+	cursor: text;
+}
+
+.acf-oembed .title .search {
+	height: auto;
+	border: 0 none;
+}
+
+.acf-oembed .title .acf-icon {
+	right: 7px;
+	top: 6px;
+	position: absolute;
+}
+
+.acf-oembed .canvas {
+	position: relative;
+	min-height: 250px;
+	background: #F9F9F9;
+}
+
+.acf-oembed.has-value .canvas {
+	min-height: 0;
+}
+
+.acf-oembed .canvas-media {
+	position: relative;
+	z-index: 1;
+}
+
+.acf-oembed .canvas iframe {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.acf-oembed .canvas .acf-sprite-media {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -18px 0 0 -18px;
+	z-index: 0;
+}
+
+.acf-oembed .canvas-loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	
+	background: rgba(255,255,255,0.9);
+	display: none;
+	z-index: 2;
+}
+
+.acf-oembed .canvas-loading .acf-loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -10px 0 0 -10px;
+}
+
+.acf-oembed .canvas-error {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	right: 0%;
+	margin: -9px 0 0 0;
+	text-align: center;
+	display: none;
+}
+
+.acf-oembed .canvas-error p {
+	padding: 8px;
+	margin: 0;
+	display: inline;
+}
+
+/* states */
+.acf-oembed .title-value { display: none; }
+.acf-oembed .title-search { display: block; }
+
+.acf-oembed.has-value .title-value { display: block; }
+.acf-oembed.has-value .title-search { display: none; }
+.acf-oembed.has-value .canvas .acf-sprite-media { display: none; }
+
+.acf-oembed.is-editing .title-value { display: none; }
+.acf-oembed.is-editing .title-search { display: block; }
+
+.acf-oembed.is-loading .canvas-loading { display: block; }
+.acf-oembed.is-loading .title .acf-icon { display: none; }
+
+.acf-oembed.has-error .canvas-error { display: block; }
+.acf-oembed.has-error .canvas .acf-sprite-media { display: none; }
+
+
+/*--------------------------------------------------------------------------------------------
+*
+*	Image
+*
+*--------------------------------------------------------------------------------------------*/
 
 .acf-image-uploader {
 	position: relative;
 }
 
-.acf-image-uploader .has-image { display: none; float: left; position: relative; max-width: 100%; }
-.acf-image-uploader .no-image { display: block; float: left; position: relative; max-width: 100%; }
-
-.acf-image-uploader.active .has-image { display: block; }
-.acf-image-uploader.active .no-image { display: none; }
-
+.acf-image-uploader .view {
+	float: left;
+	position: relative;
+	max-width: 100%;
+}
 
 .acf-image-uploader img {
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 	width: 100%;
 	height: auto;
 	display: block;
 	min-width: 30px;
 	min-height: 30px;
 	background: #f1f1f1;
-	margin: 0 0 0 2px;
+	margin: 0;
+	padding: 0;
 }
 
-.acf-image-uploader .no-image p {
+.acf-image-uploader .hide-if-value p {
 	display: block;
 	margin: 0 !important;
 }
@@ -300,38 +719,130 @@ not needed in WP 3.8
 *  Hover
 */
 
-.acf-image-uploader .hover {
+.acf-image-uploader .acf-soh-target {
 	position: absolute;
-	top: -11px;
-	right: -11px;
-	
-	-webkit-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
-	-moz-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
-	-o-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 	
-	transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 
-	
-	visibility: hidden;
-	opacity: 0;
+	top: 5px;
+	right: 5px;
 }
 
-.acf-image-uploader .has-image:hover .hover {
-	-webkit-transition-delay:0s;
-	-moz-transition-delay:0s;
-	-o-transition-delay:0s;
-	transition-delay:0s;
-	
-	visibility: visible;
-	opacity: 1;
+.acf-image-uploader .acf-soh-target li {
+	margin: 0 0 0 4px;
 }
 
-.acf-image-uploader .hover ul {
+
+/*--------------------------------------------------------------------------------------------
+*
+*	File
+*
+*--------------------------------------------------------------------------------------------*/
+
+.acf-file-uploader {
+	position: relative;
+}
+
+.acf-file-uploader .file-wrap {
+	border: #DFDFDF solid 1px;
+	min-height: 84px;
+	position: relative;
+}
+
+.acf-file-uploader .file-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+	background: #F1F1F1;
+	border-right: #E5E5E5 solid 1px;
+}
+
+.acf-file-uploader .file-icon img {
 	display: block;
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 
-.acf-image-uploader .hover ul li {
-	margin: 0 0 5px 0;
+.acf-file-uploader .file-info {
+	padding: 10px;
+	margin-left: 69px;
+}
+
+.acf-file-uploader .file-info p {
+	margin: 0 0 2px;
+	font-size: 13px;
+	line-height: 1.4em;
+	word-break: break-all;
+}
+
+.acf-file-uploader .file-info a {
+	text-decoration: none;
+}
+
+.acf-file-uploader .hide-if-value p {
+	display: block;
+	margin: 0 !important;
+}
+
+
+/*
+*  Hover
+*/
+
+.acf-file-uploader .acf-soh-target {
+	position: absolute;
+	top: 5px;
+	right: 5px;	
+}
+
+.acf-file-uploader .acf-soh-target li {
+	margin: 0 0 0 4px;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------
+*
+*	Date Picker
+*
+*---------------------------------------------------------------------------------------------*/
+
+.acf-ui-datepicker .ui-datepicker {
+	z-index: 999999999 !important;
+}
+
+
+/*---------------------------------------------------------------------------------------------
+*
+*	Taxonomy
+*
+*---------------------------------------------------------------------------------------------*/
+
+.acf-taxonomy-field {
+	
+}
+
+.acf-taxonomy-field ul {
+	
+}
+
+.acf-taxonomy-field ul li {
+	
+}
+
+.acf-taxonomy-field .categorychecklist-holder {
+	border: #DFDFDF solid 1px;
+	border-radius: 3px;
+	max-height: 200px;
+	overflow: auto;
+}
+
+.acf-taxonomy-field .acf-checkbox-list {
+	margin: 0;
+	padding: 10px;
+}
+
+.acf-taxonomy-field ul.children {
+	padding-left: 18px;
 }
 
 
@@ -345,29 +856,25 @@ not needed in WP 3.8
 	
 }
 
-.media-modal .field {
-	padding: 0;
-}
-
-
 /* WP sets tables to act as divs. ACF uses tables, so these muct be reset */
-.media-modal .compat-attachment-fields td.field table {
+.media-modal .compat-attachment-fields td.acf-input table {
 	display: table;
 }
-.media-modal .compat-attachment-fields td.field table tbody {
+.media-modal .compat-attachment-fields td.acf-input table tbody {
 	display: table-row-group;
 }
-.media-modal .compat-attachment-fields td.field table tr {
+.media-modal .compat-attachment-fields td.acf-input table tr {
 	display: table-row;
 }
-.media-modal .compat-attachment-fields td.field table td,
-.media-modal .compat-attachment-fields td.field table th {
+.media-modal .compat-attachment-fields td.acf-input table td,
+.media-modal .compat-attachment-fields td.acf-input table th {
 	display: table-cell;
 }
 
 .compat-item table.widefat {
 	border: #DFDFDF solid 1px;
 }
+
 
 
 /* Expand / Collapse button */
@@ -395,25 +902,14 @@ not needed in WP 3.8
 	float: left;
 }
 
-.media-modal .acf-expand-details .icon {
-	height: 15px;
-	width: 15px;
-	float: left;
-	
-	background: url(../images/arrows.png) 0 -72px no-repeat;
-	border: #C7C7C7 solid 1px;
-	
-	border-radius: 10px;
+.media-modal .acf-expand-details .acf-icon {
 	margin: 0 4px 0 0;
 }
 
-.media-modal .acf-expand-details:hover .icon {
+.media-modal .acf-expand-details:hover .acf-icon {
 	border-color: #AAAAAA;
 }
 
-.media-modal.acf-expanded .acf-expand-details .icon {
-	background-position: 0 -108px;
-}
 
 .media-modal .acf-expand-details .is-open { display: none; }
 .media-modal .acf-expand-details .is-closed { display: block; }
@@ -432,7 +928,7 @@ not needed in WP 3.8
             transition: all 0.25s ease-out;  /* Firefox 16+, Opera 12.50+ */
 }
 
-.media-modal.acf-expanded .media-toolbar { right: 700px; }
+.media-modal.acf-expanded .attachments-browser .media-toolbar { right: 700px; }
 .media-modal.acf-expanded .attachments { right: 700px; }
 .media-modal.acf-expanded .media-sidebar { width: 667px; }
 
@@ -472,14 +968,31 @@ not needed in WP 3.8
 }
 
 .media-modal.acf-expanded .media-sidebar .setting span,
-.media-modal.acf-expanded .compat-item .label {
+.media-modal.acf-expanded .compat-item .label,
+.media-modal.acf-expanded .compat-item .acf-label {
 	min-width: 20%;	
 }
 
 .media-modal.acf-expanded .media-sidebar .setting input, 
 .media-modal.acf-expanded .media-sidebar .setting textarea,
-.media-modal.acf-expanded .compat-item .field {
+.media-modal.acf-expanded .compat-item .field,
+.media-modal.acf-expanded .compat-item .acf-input {
 	width: 77%;
+}
+
+
+/* Create gallery fix */
+.media-modal .media-sidebar .collection-settings .setting span {
+	padding-top: 8px;
+	margin: 0 10px 0 0;
+}
+
+.media-modal .acf-uploadedTo {
+	line-height: 28px;
+	display: inline-block;
+	position: relative;
+	bottom: -6px;
+	margin: 0 10px 0 0;
 }
 
 
@@ -543,7 +1056,8 @@ not needed in WP 3.8
 @media (max-width: 760px) {
 	
 	.media-modal.acf-expanded .media-sidebar .setting span,
-	.media-modal.acf-expanded .compat-item .label {
+	.media-modal.acf-expanded .compat-item .label,
+	.media-modal.acf-expanded .compat-item .acf-label {
 		min-width: 100%;
 		text-align: left;
 		min-height: 0;
@@ -556,554 +1070,51 @@ not needed in WP 3.8
 	
 	.media-modal.acf-expanded .media-sidebar .setting input, 
 	.media-modal.acf-expanded .media-sidebar .setting textarea,
-	.media-modal.acf-expanded .compat-item .field {
+	.media-modal.acf-expanded .compat-item .field,
+	.media-modal.acf-expanded .compat-item .acf-input {
 		width: 100%;
 	}
 	
 }
 
 
-/*---------------------------------------------------------------------------------------------
-*
-*  ACF Message Wrapper (used by image / file / gallery)
-*
-*---------------------------------------------------------------------------------------------*/
 
-.acf-message-wrapper {
-	margin: 10px 0;
-}
-
-.acf-message-wrapper .message {
-	margin: 0 !important;
-}
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*  Field: File
-*
-*---------------------------------------------------------------------------------------------*/
-
-.acf-file-uploader {
-	position: relative;
-	line-height: 1.5em;
-}
-
-.acf-file-uploader .has-file {
-	display: none;
-	float: left;
-}
-
-.acf-file-uploader .no-file {
-	display: block;
-}
-
-.acf-file-uploader.active .has-file {
-	display: block;
-}
-
-.acf-file-uploader.active .no-file {
-	display: none;
-}
-
-.acf-file-uploader li {
-	position: relative;
-	margin: 0 10px 0 0;
-}
-
-.acf-file-uploader img {
-	min-height: 60px;
-	min-width: 46px;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-	display: block;
-	background: #f1f1f1;
-}
-
-.acf-file-uploader input.button {
-	width: auto;
-}
-
-.acf-file-uploader a {
-	text-decoration: none;
-}
-
-.acf-file-uploader p {
-	margin: 0 0 4px;
-}
-
-
-/*
-*  Hover
-*/
-
-.acf-file-uploader .hover {
-	position: absolute;
-	top: -10px;
-	right: -10px;
-	
-	-webkit-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
-	-moz-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
-	-o-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 	
-	transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 
-	
-	visibility: hidden;
-	opacity: 0;
-}
-
-.acf-file-uploader .has-file:hover .hover {
-	-webkit-transition-delay:0s;
-	-moz-transition-delay:0s;
-	-o-transition-delay:0s;
-	transition-delay:0s;
-	
-	visibility: visible;
-	opacity: 1;
-}
-
-.acf-file-uploader .hover ul {
-	display: block;
-	margin: 0;
-	padding: 0;
-}
-
-.acf-file-uploader .hover ul li {
-	margin: 0 0 3px 0;
-}
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*  Field: Select
-*
-*---------------------------------------------------------------------------------------------*/
-
-#wpcontent select[multiple] {
-	height: auto;
-}
-
-#wpcontent select optgroup {
-	padding: 0 2px
-}
-
-#wpcontent select optgroup option {
-	padding-left: 6px;
-}
-
-ul.acf-checkbox-list {
-	background: transparent !important;
-}
-
-#createuser ul.acf-checkbox-list input {
-    width: auto;
-}
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*  Input Table
-*
-*---------------------------------------------------------------------------------------------*/
-
-table.acf-input-table {
-	border-radius: 0 0 0 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-table.acf-input-table > thead { }
-table.acf-input-table > thead > tr > th { 
-	padding: 8px;
-	position: relative;
-	
-	vertical-align: top;
-	border-right: 1px solid #e1e1e1;
-}
-
-table.acf-input-table > tbody {}
-
-table.acf-input-table > tbody > tr {
-	background: #fff;
-}
-
-table.acf-input-table > tbody > tr > td {
-	background: transparent;
-	border: 0 none;
-   
-    border-top: 1px solid #ededed;
-    border-right: 1px solid #ededed;
-     
-    padding: 8px;
-    position: relative;
-}
-
-table.acf-input-table > tbody > tr > td {
-	background: transparent;
-	border: 0 none;
-   
-    border-top: 1px solid #ededed;
-    border-right: 1px solid #ededed;
-     
-    padding: 8px;
-    position: relative;
-}
-
-table.acf-input-table.row_layout > tbody > tr > td {
-	border-top-color: #DFDFDF;
-}
-
-table.acf-input-table > tbody > tr:first-child > td {
-	border-top: 0 none;
-}
-
-table.acf-input-table > tbody > tr > td:last-child {
-	border-right: 0 none;
-}
-
-td.acf_input-wrap {
-	padding: 0 !important;
-}
-
-.sub-field-instructions {
-	color: #999999;
-    display: block;
-    font-family: sans-serif;
-    font-size: 12px;
-    text-shadow: 0 1px 0 #FFFFFF;
-    
-    font-weight: normal;
-}
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*	Field: Relationship
-*
-*---------------------------------------------------------------------------------------------*/
-
-.acf_relationship {
-	position: relative;
-	overflow: hidden;
-}
-
-.acf_relationship .relationship_left {
-	width: 50%;
-	float: left;
-}
-
-.acf_relationship .relationship_right {
-	width: 50%;
-	float: left;
-}
-
-.acf_relationship .relationship_label {
-	font-size: 12px;
-	font-family: sans-serif;
-	color: #999;
-	position: absolute;
-	margin-top: 5px;
-	margin-left: 10px;
-}
-
-.acf_relationship .widefat {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.acf_relationship .widefat th {
-	border-bottom: 0 none;
-}
-
-
-.acf_relationship .relationship_search {
-	margin: 0;
-	font-size: 12px;
-	line-height: 13px;
-	border-radius: 13px;
-	font-family: sans-serif;
-	padding: 5px 9px !important;
-}
-
-.acf_relationship .relationship_list {
-	background: #fff;
-	position: relative;
-	overflow: auto;
-	height: 150px;
-	border: #DFDFDF solid 1px;
-	border-top-width: 0;
-}
-
-.acf_relationship .relationship_list li.hide {
-	background: #f8f8f8;
-}
-
-.acf_relationship .relationship_list li.hide a {
-	cursor: default;
-	color: #21759B !important;
-	opacity: 0.5;
-	background: transparent !important;
-}
-
-.acf_relationship .relationship_list li {
-	border-bottom: #f8f8f8 solid 1px;
-}
-
-.acf_relationship .relationship_list li a {
-	display: block;
-	position: relative;
-	padding: 7px 9px;
-	text-decoration: none;
-}
-
-.acf_relationship .relationship_list li a .relationship-item-info {
-	color: #CCC;
-	text-transform: uppercase;
-	float: right;
-	font-size: 11px;
-}
-
-.acf_relationship .relationship_list li:hover a .relationship-item-info {
-	padding-right: 24px;
-	color: #999;
-}
-
-.acf_relationship .relationship_list li.hide:hover a .relationship-item-info {
-	padding-right: 0;
-	color: #CCC;
-}
-
-.acf_relationship .relationship_list li a:hover,
-.acf_relationship .relationship_list li a:focus {
-	background: #eaf2fa;
-	color: #000;
-	box-shadow: #d6e1ec 0 0 0 1px;
-}
-
-.acf_relationship .relationship_right .relationship_list {
-	margin-left: 10px;
-	height: 193px;
-	min-height: 193px;
-	border-top-width:1px; 
-}
-
-.acf_relationship .relationship_list li a .acf-button-add,
-.acf_relationship .relationship_list li a .acf-button-remove {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	display: none;
-	
-	cursor: pointer;
-}
-
-.acf_relationship .relationship_list li a:hover .acf-button-add,
-.acf_relationship .relationship_list li a:hover .acf-button-remove {
-	display: block;
-}
-
-.acf_relationship .relationship_list li.hide a:hover .acf-button-add {
-	display: none;
-}
-
-
-.acf_relationship .relationship_right .relationship_list li a {
-	cursor: move;
-}
-
-.acf_relationship .load-more .acf-loading {
-	padding: 0;
-	box-shadow: none;
-	background-color: transparent;
-}
-
-.acf_relationship.no-results .load-more {
-	display: none;
-}
-
-
-.acf_relationship select {
-	font-family: sans-serif;
-	font-size: 12px;
-	
-}
-
-.acf_relationship .widefat tr + tr th {
-	border-radius: 0;
-	border-top: #DFDFDF solid 1px;
-	background: #F3F3F3;
-	
-}
-
-.acf_relationship .relationship_list .result-thumbnail {
-	width:21px; 
-	height:21px; 
-	background:#F9F9F9; 
-	border:#E1E1E1 solid 1px; 
-	float:left; 
-	margin:-3px 5px 0 0;
-}
-
-.acf_relationship .relationship_list .result-thumbnail img {
-	width: 21px; 
-	height: 21px; 
-}
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*  Field: Taxonomy
-*
-*---------------------------------------------------------------------------------------------*/
-
-.acf-taxonomy-field {
-	
-}
-
-.acf-taxonomy-field ul {
-	
-}
-
-.acf-taxonomy-field .categorychecklist-holder {
-	border: #DFDFDF solid 1px;
-	border-radius: 3px;
-	max-height: 200px;
-	overflow: auto;
-}
-
-.acf-taxonomy-field .acf-checkbox-list {
-	margin: 0;
-	padding: 10px;
-}
-
-.acf-taxonomy-field ul li {
-	
-}
-
-.acf-taxonomy-field ul.children {
-	padding-left: 18px;
-}
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*	Field: Tab
-*
-*---------------------------------------------------------------------------------------------*/
-
-.field_type-tab {
+/* compat-item */
+.compat-field-acf-form-data,
+.compat-field-acf-blank {
 	display: none !important;
 }
 
-.acf-tab-group {
-	background: transparent;
-	border-bottom: #CCCCCC solid 1px;
-	margin: 0 0 10px;
-	padding: 10px 2px 0 0;
+.compat-item .acf-field {
+	margin: 0;
 }
 
-.acf-tab-group li {
-	font-family: "Open Sans",sans-serif;
-	font-size: 23px;
-    line-height: 29px;
-    margin: 0 8px 0 0;
-    
+.compat-item .acf-label {
+	min-width: 30%;
+	margin: 0;
+	padding: 0;
+	float: left;
+    text-align: right;
+    display: block;
+    float: left;
 }
 
-.acf-tab-group li a {
-	padding: 6px 10px;
-	display: block;
-	
-	color: #555555;
-	font-size: 15px;
-    font-weight: 700;
-    line-height: 24px;
-    
-    border: #CCCCCC solid 1px;
-    border-bottom: 0 none;
-    text-decoration: none;
-    background: #E4E4E4;
-    
+.compat-item .acf-label label {
+	padding-top: 7px;
+	margin: 5px 0 0;
+	color: #666666;
+    font-weight: 400;
+    line-height: 16px;
 }
 
-.acf-tab-group li a:hover, 
-.acf-tab-group li.active a {
-    background: #FFFFFF;
-    outline: none;
+.compat-item .acf-input {
+	width: 66%;
+	margin: 5px 0 0;
+	padding: 0;
+    float: right;
+    display: block;
 }
 
-.acf-tab-group li.active a {
-	background: #F1F1F1;
-	color: #000;
-	border-color: #CCCCCC;
-    border-bottom-color: #F7F7F7;
-    padding-bottom: 7px;
-    margin-bottom: -1px;
-}
-
-.acf_postbox > .inside > .field_type-tab + .field {
-	border-top: 0 none;
-}
-
-
-/*
-*  Box
-*/
-
-.acf_postbox.default .acf-tab-group {
-	padding-left: 10px;
-	border-bottom-color: #E8E8E8;
-}
-
-.acf_postbox.default .acf-tab-group li a {
-    background: #F1F1F1;
-}
-
-.acf_postbox.default .acf-tab-group li.active a {
-	background: #FFFFFF;
-}
-
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*	Field: Date Picker
-*
-*---------------------------------------------------------------------------------------------*/
-
-.ui-acf .ui-datepicker {
-	z-index: 999999999 !important;
-}
-
-
-/*---------------------------------------------------------------------------------------------
-*
-*	Other
-*
-*---------------------------------------------------------------------------------------------*/
-
-.form-field.field input[type="checkbox"],
-.form-field.field input[type="radio"] {
-	width: auto !important;
-}
-
-#createuser input,
-#your-profile input {
-	max-width: 25em;
-}
-
-/*--------------------------------------------------------------------------
-*
-*	Tab Group
-*	
-*-------------------------------------------------------------------------*/
-
-.acf-tab_group-show {
-	display: block;
-}
-tr.acf-tab_group-show {
-	display: table-row;
-}
-.acf-tab_group-hide {
-	display: none;
-}
 
 
 /*--------------------------------------------------------------------------
@@ -1112,209 +1123,17 @@ tr.acf-tab_group-show {
 *	
 *-------------------------------------------------------------------------*/
 
-/* Show */
-.acf-conditional_logic-show {
-	display: block;
-}
-
-tr.acf-conditional_logic-show {
-	display: table-row;
-}
-
-td.acf-conditional_logic-show,
-th.acf-conditional_logic-show {
-    display: table-cell;
-}
-
-
 /* Hide */
-.acf-conditional_logic-hide,
-tr.acf-conditional_logic-hide,
-td.acf-conditional_logic-hide,
-th.acf-conditional_logic-hide {
-    display: none;
+.hidden-by-conditional-logic {
+    display: none !important;
 }
 
 
-/* Hide (show blank) */
-td.acf-conditional_logic-hide.acf-show-blank,
-th.acf-conditional_logic-hide.acf-show-blank {
-    display: table-cell;
+/* Hide (appear empty) */
+.hidden-by-conditional-logic.appear-empty {
+    display: table-cell !important;
 }
 
-td.acf-conditional_logic-hide.acf-show-blank .inner,
-th.acf-conditional_logic-hide.acf-show-blank .inner {
-	display: none;
-}
-
-
-/*--------------------------------------------------------------------------
-*
-*	Conditional Logic + Tabs
-*	
-*-------------------------------------------------------------------------*/
-
-.acf-tab_group-hide.acf-conditional_logic-show {
-	display: none;
-}
-
-.hl.acf-tab-group > li.acf-conditional_logic-hide {
-	display: none;
-}
-
-
-/*--------------------------------------------------------------------------
-*
-*	Field: Color picker
-*	
-*-------------------------------------------------------------------------*/
-
-.acf-color_picker {
-	
-}
-
-.acf-color_picker input[type="text"] {
-	display: inline;
-	width: 80px !important;
-}
-
-.acf-color_picker .ui-slider-vertical {
-	width: auto;
-	height: auto;
-	background: transparent;
-	border: 0 none;
-}
-
-.acf-color_picker .ui-slider-vertical .ui-slider-handle {
-	margin-bottom: 0;
-}
-
-/* Hack for color picker in media popup */
-.media-frame .acf-color_picker .wp-color-result {
-	border-bottom: #BBBBBB solid 1px;
-}
-
-.compat-item .field .acf-color_picker input {
-	width: auto;
-	margin: 0 0 0 6px;
-}
-
-.compat-item .field .acf-color_picker .button {
-	height: 24px;
-	padding: 0 10px 1px;
-}
-
-
-/*--------------------------------------------------------------------------
-*
-*	Field: Location
-*	
-*-------------------------------------------------------------------------*/
-
-.acf-google-map {
-	position: relative;
-	border: #DFDFDF solid 1px;
-	background: #fff;
-}
-
-.acf-google-map .title {
-	position: relative;
-	border-bottom: #DFDFDF solid 1px;
-}
-
-.acf-google-map .has-value { display: none; }
-.acf-google-map .no-value { display: block; }
-
-.acf-google-map.active .has-value { display: block; }
-.acf-google-map.active .no-value { display: none; }
-
-.acf-google-map .title h4,
-.acf-google-map .title input[type="text"] {
-	margin: 0;
-	font-size: 12px;
-	line-height: 16px;
-	padding: 10px;
-	border: 0 none;
-	box-shadow: none;
-	border-radius: 0;
-	font-family: inherit;
-	cursor: text;
-}
-
-.acf-google-map .title input[type="text"] {
-	height: 36px;
-	line-height: normal;
-}
-
-.acf-google-map .title .search {
-	height: auto;
-	border: 0 none;
-}
-
-.acf-google-map .acf-sprite-remove,
-.acf-google-map .acf-sprite-locate {
-	right: 7px;
-	top: 7px;
-	position: absolute;
-}
-
-.acf-google-map .acf-sprite-remove {
-	background-position: -71px -221px;
-	height: 9px;
-	width: 9px;
-	border: 6px solid transparent;
-}
-.acf-google-map .acf-sprite-remove:hover { background-position: -71px -271px; }
-
-.acf-google-map .acf-sprite-locate {
-	background-position: -50px -300px;
-	width: 13px;
-	height: 13px;
-	border: 5px solid transparent;
-}
-.acf-google-map .acf-sprite-locate:hover { background-position: -50px -350px; }
-
-.acf-google-map .canvas {
-	height: 400px;
-}
-
-.pac-container {
-	margin-left: -1px;
-	margin-top: -1px;
-	padding: 5px 0;
-	border-color: #DFDFDF;
-}
-
-.pac-container:after {
-	display: none;
-}
-
-.pac-container .pac-item {
-	padding: 5px;
-	margin: 0 5px;
-}
-
-/*--------------------------------------------------------------------------
-*
-*	Retina
-*	
-*-------------------------------------------------------------------------*/
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
-	
-	.acf_flexible_content .layout .fc-delete-layout,
-	.acf-popup .bit,
-	.acf-gallery .toolbar .view-grid,
-	.acf-gallery .toolbar .view-list {
-		background-image: url(../images/sprite@2x.png);
-		background-size: 100px 600px;
-	}
-
-	
+.hidden-by-conditional-logic.appear-empty .acf-input {
+	display: none !important;
 }

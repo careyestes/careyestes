@@ -2,4 +2,13 @@
    Home Page Template
    ========================================================================== */
 
-body.home {}
+body.home {
+	.main-navigation {
+		width: 320px;
+		margin: 1.5em auto;
+	}
+	.wrapper {
+		width: 320px;
+		margin: 0 auto;
+	}
+}

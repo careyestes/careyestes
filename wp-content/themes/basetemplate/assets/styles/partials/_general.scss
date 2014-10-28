@@ -15,7 +15,8 @@
    General
    ========================================================================== */
 
-body { 
+body {
+	font-family: $anon;
 }
 
 
@@ -25,7 +26,7 @@ body {
 
 a,
 a:visited {
-	color: $blue;
+	color: $yellow;
 	text-decoration: none;
 }
 a:hover {
@@ -53,10 +54,12 @@ h3 { }
 h4 { }
 
 h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
 	clear: both;
 }
 
 p {
+	font-family: $georgia;
 	margin-bottom: 1.5em;
 }
 
@@ -147,20 +150,4 @@ address {
 .site-content:after,
 .site-footer:after {
 	clear: both;
-}
-
-
-/* ==========================================================================
-   Infinite Scroll
-   ========================================================================== */
-
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer {
-	display: block;
 }

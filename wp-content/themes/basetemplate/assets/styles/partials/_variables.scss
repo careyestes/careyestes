@@ -2,15 +2,17 @@
    Variables
    ========================================================================== */
 
-// Font Face
-// @include fontface('FONT_NAME', 'assets/fonts/', 'FONT_FAMILY');
-
 // Structure
-$pageWidth: 1000px;
+$pageWidth: 1024px;
 
 // Text Selection
 $selectionColor: orange;
 
 // Colors
-$red: red;
-$blue: #698fb1;
+$yellow: rgb(253, 226, 90);
+$black: #222;
+$grey: #b4b4b4;
+
+// Fonts
+$anon: 'Anonymous Pro';
+$georgia: 'Georgia', Times, serif;
