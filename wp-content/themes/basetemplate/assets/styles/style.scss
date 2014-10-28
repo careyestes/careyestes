@@ -1,0 +1,42 @@
+/*!
+Theme Name: Base Template 1.0
+Author: Carey Estes
+Author URI: http://careyestes.com
+Description: This is designed to work as a base template for all sites, with proper plugins and base styles setup
+Version: 1.0
+Text Domain: basetemplate
+
+*/
+
+// Reset, Variables, Mixins, Etc
+// DO NOT EDIT ORDER OF FILES
+@import "partials/mixins";
+@import "partials/variables";
+@import "partials/normalize";
+
+// Globals
+@import "partials/h5bp-global";
+@import "partials/general";
+@import "partials/grid";
+
+// Layout
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+
+// Menus, Page and Post styles
+@import "partials/menus";
+@import "partials/page-post";
+
+// Page Templates
+@import "partials/page-home";
+@import "partials/page-blog";
+
+// Widgets, Search, Comments, Forms, Sharing
+@import "partials/widgets";
+@import "partials/comments";
+@import "partials/forms";
+
+// Helper Classes, Print, Etc
+@import "partials/helpers";
+@import "partials/print";
