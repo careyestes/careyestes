@@ -25,11 +25,11 @@ function projects_post_type() {
                 'exclude_from_search' => false,
                 'show_ui' => true, 
                 'query_var' => true,
-                'rewrite' => array('slug'=>'','with_front'=>false),
+                'rewrite' => array('slug'=>'projects','with_front'=>true),
                 'capability_type' => 'post',
                 'hierarchical' => false,
                 'menu_position' => 20,
-                'supports' => array('title'),
+                'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
         );
 
         register_post_type( 'ce_projects', $args );
