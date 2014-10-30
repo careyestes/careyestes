@@ -11,4 +11,14 @@ body.home {
 		width: 320px;
 		margin: 0 auto;
 	}
+	figure {
+		margin: 0;
+	}
+	a {
+		display: block;
+		margin-bottom: 2em;
+		padding-bottom: 2em;
+		border-bottom: 1px dotted $grey;
+		color: $black;
+	}
 }

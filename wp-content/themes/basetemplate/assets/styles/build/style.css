@@ -542,7 +542,12 @@ img {
 /* ==========================================================================
    Typography
    ========================================================================== */
+h2 {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Georgia", Times, serif;
   font-weight: normal;
   clear: both;
 }
@@ -737,14 +742,16 @@ address {
    Header
    ========================================================================== */
 header a, header a:visited, header a:hover {
-  color: #222;
+  color: #222222;
 }
 header h1 {
+  font-family: "Anonymous Pro";
   margin: 0;
-  font-size: 1.68em;
+  font-size: 1.6em;
   font-weight: 700;
 }
 header h2 {
+  font-family: "Anonymous Pro";
   margin: 0;
   font-size: 1.3em;
   line-height: 0.6em;
@@ -870,6 +877,16 @@ body.home .main-navigation {
 body.home .wrapper {
   width: 320px;
   margin: 0 auto;
+}
+body.home figure {
+  margin: 0;
+}
+body.home a {
+  display: block;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px dotted #b4b4b4;
+  color: #222222;
 }
 
 /* ==========================================================================

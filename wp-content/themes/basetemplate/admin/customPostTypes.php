@@ -29,7 +29,7 @@ function projects_post_type() {
                 'capability_type' => 'post',
                 'hierarchical' => false,
                 'menu_position' => 20,
-                'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
+                'supports' => array('title', 'editor', 'thumbnail'),
         );
 
         register_post_type( 'ce_projects', $args );
