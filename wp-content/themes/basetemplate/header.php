@@ -38,7 +38,7 @@
 		</nav><!-- #site-navigation -->
 	</header>
 	<section class="supersearchOverlay">
-		<div class="searchCloseButton"></div>
+		<div class="searchCloseButton">Close Button</div>
 		<div class="supersearchIcon"></div>
 		<div class="supersearchContainer">
 			<input class="supersearch" type="text" placeholder="Type it here. I'll try to find it.">
