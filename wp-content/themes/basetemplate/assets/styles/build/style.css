@@ -544,6 +544,13 @@ img {
    ========================================================================== */
 h2 {
   margin: 0;
+  line-height: 1em;
+}
+
+h3 {
+  margin: 0;
+  font-style: italic;
+  font-size: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -785,6 +792,34 @@ header .carey-estes-masthead .carey-estes-logo {
   color: #b4b4b4;
 }
 
+.supersearchOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.supersearchOverlay .supersearchContainer {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: 0 auto;
+}
+.supersearchOverlay .supersearchContainer .supersearch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 0.5em;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -879,14 +914,15 @@ body.home .wrapper {
   margin: 0 auto;
 }
 body.home figure {
-  margin: 0;
+  margin: 0 0 0.5em;
 }
-body.home a {
+body.home .wrapper a {
   display: block;
   margin-bottom: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   border-bottom: 1px dotted #b4b4b4;
   color: #222222;
+  text-decoration: none;
 }
 
 /* ==========================================================================

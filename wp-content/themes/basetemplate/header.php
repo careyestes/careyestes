@@ -37,5 +37,12 @@
 			<button class="supersearch-button" >Looking for something specific? </button>
 		</nav><!-- #site-navigation -->
 	</header>
+	<section class="supersearchOverlay">
+		<div class="searchCloseButton"></div>
+		<div class="supersearchIcon"></div>
+		<div class="supersearchContainer">
+			<input class="supersearch" type="text" placeholder="Type it here. I'll try to find it.">
+		</div>
+	</section>
 
 	<div id="main" class="wrapper">

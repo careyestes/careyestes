@@ -51,8 +51,13 @@ img {
 h1 { }
 h2 {
 	margin: 0;
+	line-height: 1em;
 }
-h3 { }
+h3 {
+	margin: 0;
+	font-style: italic;
+	font-size: 1em;
+}
 h4 { }
 
 h1, h2, h3, h4, h5, h6 {

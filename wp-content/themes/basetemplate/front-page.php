@@ -13,13 +13,16 @@
 		<?php if($projectQuery->have_posts()): ?>
 			<?php while($projectQuery->have_posts()): ?>
 				<?php $projectQuery->the_post(); 
-					// $artistNames = get_field('aiop_names');
+					$subtext = get_field('subtext');
 				?>
 				<a href="<?php the_permalink() ?>">
 					<figure>
 						<?php the_post_thumbnail() ?>
 					</figure>
 					<h2><?php the_title(); ?></h2>
+					<?php if($subtext): ?>
+						<h3><?php echo $subtext ?></h3>
+				<?php endif ?>
 				</a>
 			<?php endwhile ?>
 		<?php endif; ?>
