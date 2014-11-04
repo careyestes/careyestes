@@ -831,6 +831,7 @@ header .carey-estes-masthead .carey-estes-logo {
   border: 0;
   border-bottom: 1px solid #fff;
   outline: 0;
+  color: #fde25a;
 }
 
 /* ==========================================================================
@@ -1082,58 +1083,40 @@ body.home .wrapper a {
   }
 }
 /* Default Typeahead styles */
-.twitter-typeahead {
+.supersearchContainer .twitter-typeahead {
   width: 100%;
 }
-
-.tt-query,
-.tt-hint {
+.supersearchContainer .tt-query,
+.supersearchContainer .tt-hint {
   max-width: 100%;
   outline: none;
 }
-
-.tt-query {
+.supersearchContainer .tt-query {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-
-.tt-hint {
-  color: #ccc !important;
-  font-weight: normal !important;
-  top: 3px !important;
-  left: 1px !important;
-  font-size: .8em !important;
-}
-
-.tt-dropdown-menu {
+.supersearchContainer .tt-dropdown-menu {
   width: 100%;
   margin-top: 0;
   padding: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-bottom: 3px solid #ccc;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
-.tt-suggestion {
+.supersearchContainer .tt-suggestion {
   padding: 6px 6px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
   font-size: 14px;
   line-height: normal;
 }
-
-.tt-suggestion.tt-cursor {
+.supersearchContainer .tt-suggestion.tt-cursor {
   color: #fff;
   background-color: #517C96;
 }
-.tt-suggestion.tt-cursor a {
+.supersearchContainer .tt-suggestion.tt-cursor a {
   color: #fff;
 }
-
-.tt-suggestion p {
+.supersearchContainer .tt-suggestion p {
   margin: 0;
 }
-
-.azEmptyMessage {
+.supersearchContainer .azEmptyMessage {
   margin: 0 auto;
   font-weight: bold;
   text-align: center;

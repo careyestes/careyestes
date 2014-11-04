@@ -17,10 +17,6 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<script type="text/javascript">
-
-</script>
-
 <?php wp_footer(); ?>
 </body>
 </html>
