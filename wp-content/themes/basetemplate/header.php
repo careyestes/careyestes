@@ -34,6 +34,7 @@
 		</a>
 
 		<nav class="main-navigation" role="navigation">
+			<!-- <input class="supersearch" type="text" placeholder="Type it here. I'll try to find it."> -->
 			<button class="supersearch-button" >Looking for something specific? </button>
 		</nav><!-- #site-navigation -->
 	</header>
