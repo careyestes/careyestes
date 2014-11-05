@@ -7,14 +7,14 @@ jQuery(document).ready(function($) {
 		$('.supersearchOverlay').fadeOut('fast');
 	});
 
-  var searchTitle = new Bloodhound({
-    datumTokenizer: function (d) { return Bloodhound.tokenizers.whitespace(d.title); },
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    prefetch: {
-      url: 'data/search.json',
-      // ttl: 1
-    }
-  });
+  // var searchTitle = new Bloodhound({
+  //   datumTokenizer: function (d) { return Bloodhound.tokenizers.whitespace(d.title); },
+  //   queryTokenizer: Bloodhound.tokenizers.whitespace,
+  //   prefetch: {
+  //     url: 'data/search.json',
+  //     // ttl: 1
+  //   }
+  // });
   var searchContent = new Bloodhound({
     datumTokenizer: function (d) { return Bloodhound.tokenizers.whitespace(d.content); },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -23,20 +23,20 @@ jQuery(document).ready(function($) {
       // ttl: 1
       }
   });
-  searchTitle.initialize();
+  // searchTitle.initialize();
   searchContent.initialize();
 
   var superSearch = $('.supersearch').typeahead({
     highlight: true
   },
-  {
-    name: 'superSearchTitle',
-    displayKey: 'title',
-    source: searchTitle.ttAdapter(),
-    templates: {
-      suggestion: Handlebars.compile('<div class="buildingsListItem"><a class="buildingsLinkOut">{{title}}</a></div>')
-    }
-  },
+  // {
+  //   name: 'superSearchTitle',
+  //   displayKey: 'title',
+  //   source: searchTitle.ttAdapter(),
+  //   templates: {
+  //     suggestion: Handlebars.compile('<div class="buildingsListItem"><a class="buildingsLinkOut">{{title}}</a></div>')
+  //   }
+  // },
   {
     name: 'superSearchContent',
     displayKey: 'title',
