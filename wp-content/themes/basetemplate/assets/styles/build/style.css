@@ -513,7 +513,7 @@ textarea {
    General
    ========================================================================== */
 body {
-  font-family: "Anonymous Pro";
+  font-family: "Anonymous Pro", serif;
 }
 
 /* ==========================================================================
@@ -749,16 +749,16 @@ address {
    Header
    ========================================================================== */
 header a, header a:visited, header a:hover {
-  color: #222222;
+  color: #222;
 }
 header h1 {
-  font-family: "Anonymous Pro";
+  font-family: "Anonymous Pro", serif;
   margin: 0;
   font-size: 1.6em;
   font-weight: 700;
 }
 header h2 {
-  font-family: "Anonymous Pro";
+  font-family: "Anonymous Pro", serif;
   margin: 0;
   font-size: 1.3em;
   line-height: 0.6em;
@@ -790,48 +790,6 @@ header .carey-estes-masthead .carey-estes-logo {
   font-style: italic;
   text-align: left;
   color: #b4b4b4;
-}
-
-.supersearchOverlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-}
-.supersearchOverlay .searchCloseButton {
-  position: absolute;
-  top: 50px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background: url(assets/images/icon-sprite.svg) no-repeat -50px 0;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: pointer;
-}
-.supersearchOverlay .supersearchContainer {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  right: 0;
-  width: 90%;
-  margin: 0 auto;
-}
-.supersearchOverlay .supersearchContainer .supersearch {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-bottom: 0.5em;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #fff;
-  outline: 0;
-  color: #fde25a;
 }
 
 /* ==========================================================================
@@ -935,8 +893,14 @@ body.home .wrapper a {
   margin-bottom: 2em;
   padding-bottom: 1em;
   border-bottom: 1px dotted #b4b4b4;
-  color: #222222;
+  color: #222;
   text-decoration: none;
+}
+body.home .project-background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* ==========================================================================
@@ -1082,6 +1046,59 @@ body.home .wrapper a {
     page-break-after: avoid;
   }
 }
+.supersearchOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.supersearchOverlay .supersearchIcon {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  background: url(assets/images/icon-sprite.svg) no-repeat 0 0;
+}
+.supersearchOverlay .searchCloseButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: url(assets/images/icon-sprite.svg) no-repeat -50px 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.supersearchOverlay .supersearchContainer {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.6em;
+  font-family: "Georgia", Times, serif;
+}
+.supersearchOverlay .supersearchContainer .supersearch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 0.5em;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  outline: 0;
+  color: #fff;
+}
+
 /* Default Typeahead styles */
 .supersearchContainer .twitter-typeahead {
   width: 100%;
@@ -1096,22 +1113,26 @@ body.home .wrapper a {
 }
 .supersearchContainer .tt-dropdown-menu {
   width: 100%;
-  margin-top: 0;
+  margin-top: 1px;
   padding: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .supersearchContainer .tt-suggestion {
-  padding: 6px 6px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-  font-size: 14px;
+  padding: 0.6em 0.5em;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.9em;
   line-height: normal;
 }
+.supersearchContainer .tt-suggestion .projectListItem {
+  display: block;
+  text-decoration: none;
+}
 .supersearchContainer .tt-suggestion.tt-cursor {
-  color: #fff;
-  background-color: #517C96;
+  color: #fde25a;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .supersearchContainer .tt-suggestion.tt-cursor a {
-  color: #fff;
+  color: #fde25a;
 }
 .supersearchContainer .tt-suggestion p {
   margin: 0;

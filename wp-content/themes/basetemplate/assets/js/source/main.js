@@ -2,47 +2,36 @@ jQuery(document).ready(function($) {
   var url = objectUrl.themeUrl;
 	$( ".supersearch-button" ).click(function() {
 		$('.supersearchOverlay').fadeIn('fast');
+    $('.supersearch').focus();
 	});
 	$('.searchCloseButton').click(function() {
 		$('.supersearchOverlay').fadeOut('fast');
 	});
 
-  // var searchTitle = new Bloodhound({
-  //   datumTokenizer: function (d) { return Bloodhound.tokenizers.whitespace(d.title); },
-  //   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  //   prefetch: {
-  //     url: 'data/search.json',
-  //     // ttl: 1
-  //   }
-  // });
+  // Init Typeahead
   var searchContent = new Bloodhound({
-    datumTokenizer: function (d) { return Bloodhound.tokenizers.whitespace(d.content); },
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    prefetch: {
-      url: 'data/search.json',
-      // ttl: 1
-      }
-  });
-  // searchTitle.initialize();
+      datumTokenizer: function (d) { 
+          return Bloodhound.tokenizers.whitespace(d.content);
+        },
+        limit: 5,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: {
+            url: url+'/assets/json/supersearch.json',
+            ttl: 1
+        }
+    });
+
   searchContent.initialize();
 
   var superSearch = $('.supersearch').typeahead({
     highlight: true
   },
-  // {
-  //   name: 'superSearchTitle',
-  //   displayKey: 'title',
-  //   source: searchTitle.ttAdapter(),
-  //   templates: {
-  //     suggestion: Handlebars.compile('<div class="buildingsListItem"><a class="buildingsLinkOut">{{title}}</a></div>')
-  //   }
-  // },
   {
     name: 'superSearchContent',
     displayKey: 'title',
     source: searchContent.ttAdapter(),
     templates: {
-      suggestion: Handlebars.compile('<div class="buildingsListItem"><a class="buildingsLinkOut">{{title}}</a></div>')
+      suggestion: Handlebars.compile('<a href="{{link}}" class="projectListItem"><span>{{title}}</span></a>')
     }
   });
 });

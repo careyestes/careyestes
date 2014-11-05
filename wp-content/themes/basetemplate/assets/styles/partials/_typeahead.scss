@@ -1,3 +1,58 @@
+.supersearchOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $overlay;
+  .supersearchIcon {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    background: url(assets/images/icon-sprite.svg) no-repeat 0 0;
+  }
+  .searchCloseButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(assets/images/icon-sprite.svg) no-repeat -50px 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .supersearchContainer {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.6em;
+    font-family: $georgia;
+    .supersearch {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 0.5em;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      outline: 0;
+      color: #fff;
+    }
+  }
+}
+
+
+
 /* Default Typeahead styles */
 .supersearchContainer {
   .twitter-typeahead {
@@ -17,28 +72,33 @@
 
   .tt-dropdown-menu {
     width: 100%;
-    margin-top: 0;
+    margin-top: 1px;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.4);
   }
 
   .tt-suggestion {
-    padding: 6px 6px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-    font-size: 14px;
+    padding: 0.6em 0.5em;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.9em;
     line-height: normal;
+    .projectListItem {
+      display: block;
+      text-decoration: none;
     }
+  }
 
   .tt-suggestion.tt-cursor {
-    color: #fff;
-    background-color: #517C96; 
+    color: $yellow;
+    background-color: rgba(0, 0, 0, 0.8);
     a {
-      color: #fff;
+      color: $yellow;
     }
   }
 
   .tt-suggestion p {
-    margin: 0; }
+    margin: 0; 
+  }
 
   .azEmptyMessage {
     margin: 0 auto;

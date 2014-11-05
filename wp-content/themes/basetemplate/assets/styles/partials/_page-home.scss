@@ -22,4 +22,10 @@ body.home {
 		color: $black;
 		text-decoration: none;
 	}
+	.project-background-image {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
 }

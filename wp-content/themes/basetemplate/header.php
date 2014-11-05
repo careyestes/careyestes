@@ -42,7 +42,7 @@
 		<div class="searchCloseButton">Close Button</div>
 		<div class="supersearchIcon"></div>
 		<div class="supersearchContainer">
-			<input class="supersearch" type="text" placeholder="Type it here. I'll try to find it.">
+			<input class="supersearch" type="text" placeholder="Start typing...">
 		</div>
 	</section>
 

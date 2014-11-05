@@ -9,20 +9,32 @@ require_once('admin/customFields.php');
 if(!is_admin()) {
 	// Get all site content into json
 	$searchArray = array();
-	$args = array(
+	$contentArgs = array(
 		'post_type' => array('post', 'page', 'ce_projects'),
 		'posts_per_page' => -1
 	);
-	$searchQuery = new WP_Query($args);
-	if($searchQuery->have_posts()) {
-		while($searchQuery->have_posts()) {
-			$searchQuery->the_post();
-			$theTitle = get_the_title();
-			$theContent = get_the_content();
-			$searchArray[] = array('title'=> $theTitle, 'content'=> $theContent);
+	$queryAllContent = get_posts($contentArgs);
+	if($queryAllContent) {
+		foreach($queryAllContent as $post) {
+			setup_postdata( $post );
+			$title   = get_the_title();
+			$content = $post->post_content;
+			$link    = get_the_permalink();
+			$content = str_replace("&nbsp;", " ", $content);
+			$content = html_entity_decode($content);
+			$content = strip_tags($content);
+			$content = preg_replace('/[\r\n]+/', " ", $content);
+			$content = preg_replace('/[ \t]+/', " ", $content);
+			$content = preg_replace("/[^a-z0-9\-!@#$%^&*()_+=.,?]/i", " ", $content);
+			$contentArray[] = array('title' => $title, 'content' => $content, 'link' => $link);
+			// var_dump($content);
+			// echo "<br><br><br>";
 		}
 	}
-	wp_reset_postdata();
-	$jsonFile = json_encode($searchArray);
-	file_put_contents('data/search.json', $jsonFile);
+// die;
+$dir = get_template_directory().'/assets/json';
+if ( !file_exists($dir) ) {
+	mkdir ($dir, 0744);
+}
+file_put_contents ($dir.'/supersearch.json', json_encode($contentArray));
 }
