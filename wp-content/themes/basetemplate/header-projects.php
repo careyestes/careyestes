@@ -23,7 +23,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site projectHeader">
 	<header class="site-header" role="banner">
 		<a class="carey-estes-masthead" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<img class="carey-estes-logo" src="<?php echo get_template_directory_uri() ?>/assets/images/carey-estes-logo.svg" alt="Carey Estes Logo">
@@ -34,8 +34,13 @@
 		</a>
 
 		<nav class="main-navigation" role="navigation">
-			<button class="supersearch-button" >Looking for something specific? </button>
-		</nav><!-- #site-navigation -->
+			<div class="pageNav">
+				<button class="supersearch-button" >Looking for something specific? </button>
+				<a href="<?php echo home_url() ?>" class="viewAll">
+					View All Projects
+				</a>
+			</div>
+		</nav>
 	</header>
 	<section class="supersearchOverlay">
 		<div class="searchCloseButton">Close Button</div>

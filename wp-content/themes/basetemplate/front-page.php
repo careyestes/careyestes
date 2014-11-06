@@ -15,12 +15,15 @@
 				<?php $projectQuery->the_post(); 
 					$subtext = get_field('subtext');
 					$bgImage = get_field('background_image');
+					$projectColor = get_field('custom_color');
 				?>
-				<div id="<?php echo the_id(); ?>" class="project-background-image">
-					<img src="<?php echo $bgImage['url'] ?>" alt="<?php echo $bgImage['title'] ?>">
-				</div>
-				<a id = "projectTile" class="<?php echo the_id(); ?>" href="<?php the_permalink() ?>">
-					<figure>
+				<?php if ($bgImage): ?>
+					<div id="<?php echo the_id(); ?>" class="project-background-image">
+						<img src="<?php echo $bgImage['url'] ?>" alt="<?php echo $bgImage['title'] ?>">
+					</div>
+				<?php endif ?>
+				<a class="projectTile <?php echo the_id(); ?>" href="<?php the_permalink() ?>">
+					<figure style="background-color: <?php echo $projectColor ?>">
 						<?php the_post_thumbnail() ?>
 					</figure>
 					<h2><?php the_title(); ?></h2>

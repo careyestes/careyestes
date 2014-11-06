@@ -5,6 +5,29 @@
 #page {
 	max-width: $pageWidth;
 	margin: 20px auto;
+	.projectNav {
+		width: 30%;
+		float: left;
+		text-align: right;
+		padding-right: 1em;
+	}
+	.projectLabel {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10000;
+		width: 100%;
+		.entry-header {
+			img {
+				width: 100px;
+				height: auto;
+			}
+		}
+	}
+	.projectDescription {
+		float: left;
+		width: 70%;
+	}
 }
 
 .content-area {

@@ -723,6 +723,27 @@ address {
   max-width: 1024px;
   margin: 20px auto;
 }
+#page .projectNav {
+  width: 30%;
+  float: left;
+  text-align: right;
+  padding-right: 1em;
+}
+#page .projectLabel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+}
+#page .projectLabel .entry-header img {
+  width: 100px;
+  height: auto;
+}
+#page .projectDescription {
+  float: left;
+  width: 70%;
+}
 
 .content-area {
   float: left;
@@ -749,7 +770,7 @@ address {
    Header
    ========================================================================== */
 header a, header a:visited, header a:hover {
-  color: #222;
+  color: #222222;
 }
 header h1 {
   font-family: "Anonymous Pro", serif;
@@ -768,6 +789,7 @@ header .carey-estes-masthead {
   width: 320px;
   margin: 0 auto;
   text-align: center;
+  text-decoration: none;
 }
 header .carey-estes-masthead .carey-estes-logo {
   width: 66px;
@@ -778,7 +800,9 @@ header .carey-estes-masthead .carey-estes-logo {
   clear: both;
   display: block;
   width: 100%;
-  border-bottom: 1px dotted #777;
+  margin-top: 1.5em;
+  border-bottom: 1px dotted #777777;
+  font-family: "Georgia", Times, serif;
 }
 .main-navigation .supersearch-button {
   width: 100%;
@@ -789,7 +813,25 @@ header .carey-estes-masthead .carey-estes-logo {
   font-family: "Georgia", Times, serif;
   font-style: italic;
   text-align: left;
-  color: #777;
+  color: #777777;
+}
+.main-navigation .pageNav {
+  width: 53%;
+  height: 38px;
+  margin: 0 auto;
+}
+.main-navigation .pageNav .supersearch-button {
+  width: 275px;
+  float: left;
+}
+.main-navigation .pageNav .viewAll {
+  display: block;
+  float: left;
+  padding: 0.5em 0.5em 0.5em 1.8em;
+  background: url(assets/images/icon-sprite.svg) no-repeat -90px 9px;
+  font-style: italic;
+  text-align: left;
+  color: #777777;
 }
 
 /* ==========================================================================
@@ -892,16 +934,22 @@ body.home .wrapper a {
   display: block;
   margin-bottom: 2em;
   padding-bottom: 1em;
-  border-bottom: 1px dotted #777;
-  color: #222;
+  border-bottom: 1px dotted #777777;
+  color: #222222;
   text-decoration: none;
 }
 body.home .project-background-image {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
   opacity: 0.2;
+  width: 100%;
+}
+body.home .project-background-image img {
+  width: 100%;
+  height: auto;
 }
 
 /* ==========================================================================

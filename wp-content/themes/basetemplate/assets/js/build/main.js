@@ -1,13 +1,5 @@
 jQuery(document).ready(function($) {
   var url = objectUrl.themeUrl;
-	$( ".supersearch-button" ).click(function() {
-		$('.supersearchOverlay').fadeIn('fast');
-    $('.supersearch').focus();
-	});
-	$('.searchCloseButton').click(function() {
-		$('.supersearchOverlay').fadeOut('fast');
-	});
-
   // Init Typeahead
   var searchContent = new Bloodhound({
       datumTokenizer: function (d) { 
@@ -33,5 +25,20 @@ jQuery(document).ready(function($) {
     templates: {
       suggestion: Handlebars.compile('<a href="{{link}}" class="projectListItem"><span>{{title}}</span></a>')
     }
+  });
+
+  $( ".supersearch-button" ).click(function() {
+    $('.supersearchOverlay').fadeIn('fast');
+    $('.supersearch').focus();
+  });
+  $('.searchCloseButton').click(function() {
+    $('.supersearchOverlay').fadeOut('fast');
+  });
+  $('.projectTile').hover(function() {
+    var thisId = $(this).attr('class').split(' ').pop();
+    $('#'+thisId).fadeIn('fast');
+  }, function() {
+    var thisId = $(this).attr('class').split(' ').pop();
+    $('#'+thisId).fadeOut('fast');
   });
 });

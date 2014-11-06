@@ -22,6 +22,7 @@ header {
 		width: 320px;
 		margin: 0 auto;
 		text-align: center;
+		text-decoration: none;
 		.carey-estes-logo {
 			width: 66px;
 			height: 49px;
@@ -33,7 +34,9 @@ header {
 	clear: both;
 	display: block;
 	width: 100%;
+	margin-top: 1.5em;
 	border-bottom: 1px dotted $grey;
+	font-family: $georgia;
 	.supersearch-button {
 		width: 100%;
 		padding: 0.5em 0.5em 0.5em 1.8em;
@@ -44,5 +47,23 @@ header {
 		font-style: italic;
 		text-align: left;
 		color: $grey;
+	}
+	.pageNav {
+		width: 53%;
+		height: 38px;
+		margin: 0 auto;
+		.supersearch-button {
+			width: 275px;
+			float: left;
+		}
+		.viewAll {
+			display: block;
+			float: left;
+			padding: 0.5em 0.5em 0.5em 1.8em;
+			background: url(assets/images/icon-sprite.svg) no-repeat -90px 9px;
+			font-style: italic;
+			text-align: left;
+			color: $grey;
+		}
 	}
 }
