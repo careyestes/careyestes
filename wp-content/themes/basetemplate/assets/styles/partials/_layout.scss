@@ -6,16 +6,32 @@
 	max-width: $pageWidth;
 	margin: 20px auto;
 	.projectNav {
-		width: 30%;
+		width: 24%;
 		float: left;
 		text-align: right;
 		padding-right: 1em;
+		h1 {
+			margin: 0;
+		}
+		h2 {
+			font-size: 1em;
+			font-style: italic;
+			margin-bottom: 1em;
+		}
+		ul {
+			margin: 0;
+			list-style: none;
+			font-size: 1.3em;
+		}
+		a {
+			font-family: $georgia;
+		}
 	}
 	.projectLabel {
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 10000;
+		z-index: -1;
 		width: 100%;
 		.entry-header {
 			img {
@@ -27,6 +43,10 @@
 	.projectDescription {
 		float: left;
 		width: 70%;
+	}
+	.wp-caption {
+		border: 0;
+		border-bottom: 1px dotted $grey;
 	}
 }
 

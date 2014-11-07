@@ -14,14 +14,22 @@ get_template_part( 'header', 'projects' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 			<?php 
+				$subtext = get_field('subtext');
 				$projectColor = get_field('custom_color');
+				$projectAnchors = get_field('project_anchors');
 			?>
 				<section class="projectNav">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<ul>
-						<li>Links to anchors here.</li>
-						<li>And here</li>
-					</ul>
+					<?php if ($subtext): ?>
+						<h2><?php echo $subtext; ?></h2>
+					<?php endif ?>
+					<?php if(isset($projectAnchors)): ?>
+						<ul>
+							<?php foreach($projectAnchors as $anchor): ?>
+								<li><a style="color: <?php echo $projectColor ?>;" href="#<?php echo $anchor['project_anchor']; ?>"><?php echo $anchor['project_anchor']; ?></a></li>
+							<?php endforeach ?>
+						</ul>
+				<?php endif ?>
 				</section>
 
 				<article id="post-<?php the_ID(); ?>" class="projectDescription">

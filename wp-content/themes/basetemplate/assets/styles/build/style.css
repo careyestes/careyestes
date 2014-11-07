@@ -561,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: "Georgia", Times, serif;
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em;
 }
 
 blockquote {
@@ -724,16 +724,32 @@ address {
   margin: 20px auto;
 }
 #page .projectNav {
-  width: 30%;
+  width: 24%;
   float: left;
   text-align: right;
   padding-right: 1em;
+}
+#page .projectNav h1 {
+  margin: 0;
+}
+#page .projectNav h2 {
+  font-size: 1em;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+#page .projectNav ul {
+  margin: 0;
+  list-style: none;
+  font-size: 1.3em;
+}
+#page .projectNav a {
+  font-family: "Georgia", Times, serif;
 }
 #page .projectLabel {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: -1;
   width: 100%;
 }
 #page .projectLabel .entry-header img {
@@ -743,6 +759,10 @@ address {
 #page .projectDescription {
   float: left;
   width: 70%;
+}
+#page .wp-caption {
+  border: 0;
+  border-bottom: 1px dotted #777777;
 }
 
 .content-area {
@@ -770,7 +790,7 @@ address {
    Header
    ========================================================================== */
 header a, header a:visited, header a:hover {
-  color: #222;
+  color: #222222;
 }
 header h1 {
   font-family: "Anonymous Pro", serif;
@@ -801,7 +821,7 @@ header .carey-estes-masthead .carey-estes-logo {
   display: block;
   width: 100%;
   margin-top: 1.5em;
-  border-bottom: 1px dotted #777;
+  border-bottom: 1px dotted #777777;
   font-family: "Georgia", Times, serif;
 }
 .main-navigation .supersearch-button {
@@ -813,7 +833,7 @@ header .carey-estes-masthead .carey-estes-logo {
   font-family: "Georgia", Times, serif;
   font-style: italic;
   text-align: left;
-  color: #777;
+  color: #777777;
 }
 .main-navigation .pageNav {
   width: 53%;
@@ -831,7 +851,7 @@ header .carey-estes-masthead .carey-estes-logo {
   background: url(assets/images/icon-sprite.svg) no-repeat -90px 9px;
   font-style: italic;
   text-align: left;
-  color: #777;
+  color: #777777;
 }
 
 /* ==========================================================================
@@ -934,8 +954,8 @@ body.home .wrapper a {
   display: block;
   margin-bottom: 2em;
   padding-bottom: 1em;
-  border-bottom: 1px dotted #777;
-  color: #222;
+  border-bottom: 1px dotted #777777;
+  color: #222222;
   text-decoration: none;
 }
 body.home .project-background-image {
