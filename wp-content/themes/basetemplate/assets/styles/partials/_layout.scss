@@ -1,7 +1,6 @@
 /* ==========================================================================
    Layout
    ========================================================================== */
-
 #page {
 	max-width: $pageWidth;
 	margin: 20px auto;
@@ -27,19 +26,6 @@
 			font-family: $georgia;
 		}
 	}
-	.projectLabel {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		width: 100%;
-		.entry-header {
-			img {
-				width: 100px;
-				height: auto;
-			}
-		}
-	}
 	.projectDescription {
 		float: left;
 		width: 70%;
@@ -49,7 +35,6 @@
 		border-bottom: 1px dotted $grey;
 	}
 }
-
 .content-area {
 	float: left;
 	margin: 0 -25% 0 0;

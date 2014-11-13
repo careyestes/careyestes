@@ -33,14 +33,6 @@ get_template_part( 'header', 'projects' ); ?>
 				</section>
 
 				<article id="post-<?php the_ID(); ?>" class="projectDescription">
-					<section class="projectLabel" style="border-top: 45px solid <?php echo $projectColor ?>">
-						<header class="entry-header">
-							<?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
-							<?php the_post_thumbnail('thumbnail'); ?>
-							<?php endif; ?>
-						</header>
-					</section>
-
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>

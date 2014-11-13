@@ -745,24 +745,13 @@ address {
 #page .projectNav a {
   font-family: "Georgia", Times, serif;
 }
-#page .projectLabel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-}
-#page .projectLabel .entry-header img {
-  width: 100px;
-  height: auto;
-}
 #page .projectDescription {
   float: left;
   width: 70%;
 }
 #page .wp-caption {
   border: 0;
-  border-bottom: 1px dotted #777777;
+  border-bottom: 1px dotted #777;
 }
 
 .content-area {
@@ -789,8 +778,43 @@ address {
 /* ==========================================================================
    Header
    ========================================================================== */
+.projectStickyHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+.projectStickyHeader .projectThumb {
+  position: absolute;
+  z-index: -1;
+  width: 65px;
+  height: 65px;
+}
+.projectStickyHeader .stickyLogoHeader {
+  display: none;
+  position: fixed;
+  z-index: -2;
+  width: 100%;
+  height: 65px;
+  background: rgba(0, 0, 0, 0.8);
+}
+.projectStickyHeader .stickyLogoHeader .supersearch-button {
+  width: 30px;
+  margin: 0 auto;
+  background: url(assets/images/search-sprite.svg) no-repeat 0 center;
+}
+.projectStickyHeader .stickyLogoHeader .carey-estes-sticky-masthead {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+}
+.projectStickyHeader .stickyLogoHeader .carey-estes-sticky-masthead .carey-estes-logo-white {
+  padding-top: 10px;
+}
+
 header a, header a:visited, header a:hover {
-  color: #222222;
+  color: #222;
 }
 header h1 {
   font-family: "Anonymous Pro", serif;
@@ -806,6 +830,8 @@ header h2 {
 }
 header .carey-estes-masthead {
   display: block;
+  position: relative;
+  z-index: 0;
   width: 320px;
   margin: 0 auto;
   text-align: center;
@@ -821,7 +847,7 @@ header .carey-estes-masthead .carey-estes-logo {
   display: block;
   width: 100%;
   margin-top: 1.5em;
-  border-bottom: 1px dotted #777777;
+  border-bottom: 1px dotted #777;
   font-family: "Georgia", Times, serif;
 }
 .main-navigation .supersearch-button {
@@ -833,7 +859,7 @@ header .carey-estes-masthead .carey-estes-logo {
   font-family: "Georgia", Times, serif;
   font-style: italic;
   text-align: left;
-  color: #777777;
+  color: #777;
 }
 .main-navigation .pageNav {
   width: 53%;
@@ -851,7 +877,7 @@ header .carey-estes-masthead .carey-estes-logo {
   background: url(assets/images/icon-sprite.svg) no-repeat -90px 9px;
   font-style: italic;
   text-align: left;
-  color: #777777;
+  color: #777;
 }
 
 /* ==========================================================================
@@ -954,8 +980,8 @@ body.home .wrapper a {
   display: block;
   margin-bottom: 2em;
   padding-bottom: 1em;
-  border-bottom: 1px dotted #777777;
-  color: #222222;
+  border-bottom: 1px dotted #777;
+  color: #222;
   text-decoration: none;
 }
 body.home .project-background-image {

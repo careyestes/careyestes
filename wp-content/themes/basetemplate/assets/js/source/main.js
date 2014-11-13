@@ -27,6 +27,7 @@ jQuery(document).ready(function($) {
     }
   });
 
+  // Add modal for supersearch
   $( ".supersearch-button" ).click(function() {
     $('.supersearchOverlay').fadeIn('fast');
     $('.supersearch').focus();
@@ -34,11 +35,20 @@ jQuery(document).ready(function($) {
   $('.searchCloseButton').click(function() {
     $('.supersearchOverlay').fadeOut('fast');
   });
+  // Add hover state for homepage tiles
   $('.projectTile').hover(function() {
     var thisId = $(this).attr('class').split(' ').pop();
     $('#'+thisId).fadeIn('fast');
   }, function() {
     var thisId = $(this).attr('class').split(' ').pop();
     $('#'+thisId).fadeOut('fast');
+  });
+  // Add sticky header on scroll
+  $('.pageNav').waypoint(function() {
+    if ($(".stickyLogoHeader").is(":hidden")) {
+      $(".stickyLogoHeader").slideDown(100);
+    } else {
+          $(".stickyLogoHeader").slideUp(100);
+      }
   });
 });
