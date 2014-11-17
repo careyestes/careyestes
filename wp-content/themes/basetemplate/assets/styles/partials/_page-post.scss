@@ -24,6 +24,11 @@
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+.projectDescription {
+	.entry-content {
+		margin-top: 0.5em;
+	}
+}
 
 .page-links {
 	clear: both;
@@ -47,8 +52,8 @@
 
 .wp-caption img[class*="wp-image-"] {
 	display: block;
-	margin: 1.2% auto 0;
-	max-width: 98%;
+	margin: 0 auto 0;
+	max-width: 100%;
 }
 
 .wp-caption-text {

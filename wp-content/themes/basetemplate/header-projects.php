@@ -1,4 +1,7 @@
-<?php ?><!DOCTYPE html>
+<?php 
+  $id = get_queried_object_id();
+  $thisProjectColor = get_field('custom_color', $id);
+?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
 <![endif]-->
@@ -28,11 +31,12 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+<style type="text/css">
+  .projectDescription a {
+  	color: <?php echo $thisProjectColor; ?>;
+  }
+</style>
 </head>
-<?php 
-  $id = get_queried_object_id();
-  $thisProjectColor = get_field('custom_color', $id);
-?>
 <body <?php body_class(); ?>>
 <section class="projectStickyHeader" style="border-top: 8px solid <?php echo $thisProjectColor ?>">
   <div class="projectThumb">
@@ -41,11 +45,13 @@
 		} ?>
   </div>
   <div class="stickyLogoHeader">
-	  <button class="supersearch-button"></button>
-  	<a class="carey-estes-sticky-masthead" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<img class="carey-estes-logo-white" src="<?php echo get_template_directory_uri() ?>/assets/images/carey-estes-logo-white.svg" alt="Carey Estes Logo">
-		</a>
-		<a href="<?php echo home_url() ?>" class="viewAll">View All Projects</a>
+  	<section class="stickyNav">
+  		<button class="supersearch-button"></button>
+	  	<a class="carey-estes-sticky-masthead" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				<img class="carey-estes-logo-white" src="<?php echo get_template_directory_uri() ?>/assets/images/carey-estes-logo-white.svg" alt="Carey Estes Logo">
+			</a>
+			<a href="<?php echo home_url() ?>" class="viewAll"></a>
+  	</section>
   </div>
 </section>
 <div id="page" class="hfeed site projectHeader">

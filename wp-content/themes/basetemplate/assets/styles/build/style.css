@@ -751,7 +751,7 @@ address {
 }
 #page .wp-caption {
   border: 0;
-  border-bottom: 1px dotted #777;
+  border-bottom: 1px dotted #777777;
 }
 
 .content-area {
@@ -799,22 +799,40 @@ address {
   height: 65px;
   background: rgba(0, 0, 0, 0.8);
 }
-.projectStickyHeader .stickyLogoHeader .supersearch-button {
-  width: 30px;
+.projectStickyHeader .stickyLogoHeader .stickyNav {
+  width: 200px;
   margin: 0 auto;
-  background: url(assets/images/search-sprite.svg) no-repeat 0 center;
 }
-.projectStickyHeader .stickyLogoHeader .carey-estes-sticky-masthead {
+.projectStickyHeader .stickyLogoHeader .stickyNav .supersearch-button {
   display: block;
-  width: 60px;
-  margin: 0 auto;
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin: 22px 26% 0 0;
+  background: url(assets/images/icon-sprite.svg) no-repeat -108px -20px;
+  border: 0;
+  outline: 0;
 }
-.projectStickyHeader .stickyLogoHeader .carey-estes-sticky-masthead .carey-estes-logo-white {
+.projectStickyHeader .stickyLogoHeader .stickyNav .viewAll {
+  display: block;
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin: 22px 0 0 0;
+  background: url(assets/images/icon-sprite.svg) no-repeat -90px -20px;
+}
+.projectStickyHeader .stickyLogoHeader .stickyNav .carey-estes-sticky-masthead {
+  display: block;
+  float: left;
+  width: 60px;
+  margin: 0 24% 0 0;
+}
+.projectStickyHeader .stickyLogoHeader .stickyNav .carey-estes-sticky-masthead .carey-estes-logo-white {
   padding-top: 10px;
 }
 
 header a, header a:visited, header a:hover {
-  color: #222;
+  color: #222222;
 }
 header h1 {
   font-family: "Anonymous Pro", serif;
@@ -847,7 +865,7 @@ header .carey-estes-masthead .carey-estes-logo {
   display: block;
   width: 100%;
   margin-top: 1.5em;
-  border-bottom: 1px dotted #777;
+  border-bottom: 1px dotted #777777;
   font-family: "Georgia", Times, serif;
 }
 .main-navigation .supersearch-button {
@@ -859,7 +877,7 @@ header .carey-estes-masthead .carey-estes-logo {
   font-family: "Georgia", Times, serif;
   font-style: italic;
   text-align: left;
-  color: #777;
+  color: #777777;
 }
 .main-navigation .pageNav {
   width: 53%;
@@ -873,11 +891,12 @@ header .carey-estes-masthead .carey-estes-logo {
 .main-navigation .pageNav .viewAll {
   display: block;
   float: left;
+  height: 27px;
   padding: 0.5em 0.5em 0.5em 1.8em;
   background: url(assets/images/icon-sprite.svg) no-repeat -90px 9px;
   font-style: italic;
   text-align: left;
-  color: #777;
+  color: #777777;
 }
 
 /* ==========================================================================
@@ -906,6 +925,10 @@ header .carey-estes-masthead .carey-estes-logo {
   margin: 1.5em 0 0;
 }
 
+.projectDescription .entry-content {
+  margin-top: 0.5em;
+}
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -928,8 +951,8 @@ header .carey-estes-masthead .carey-estes-logo {
 
 .wp-caption img[class*="wp-image-"] {
   display: block;
-  margin: 1.2% auto 0;
-  max-width: 98%;
+  margin: 0 auto 0;
+  max-width: 100%;
 }
 
 .wp-caption-text {
@@ -980,8 +1003,8 @@ body.home .wrapper a {
   display: block;
   margin-bottom: 2em;
   padding-bottom: 1em;
-  border-bottom: 1px dotted #777;
-  color: #222;
+  border-bottom: 1px dotted #777777;
+  color: #222222;
   text-decoration: none;
 }
 body.home .project-background-image {

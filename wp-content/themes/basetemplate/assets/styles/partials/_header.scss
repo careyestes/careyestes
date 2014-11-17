@@ -21,17 +21,35 @@
 		width: 100%;
 		height: 65px;
 		background: $overlay;
-		.supersearch-button {
-			width: 30px;
+		.stickyNav {
+			width: 200px;
 			margin: 0 auto;
-			background: url(assets/images/search-sprite.svg) no-repeat 0 center;
-		}
-		.carey-estes-sticky-masthead  {
-			display: block;
-			width: 60px;
-			margin: 0 auto;
-			.carey-estes-logo-white {
-				padding-top: 10px;
+			.supersearch-button {
+				display: block;
+				float: left;
+				width: 18px;
+				height: 18px;
+				margin: 22px 26% 0 0;
+				background: url(assets/images/icon-sprite.svg) no-repeat -108px -20px;
+				border: 0;
+				outline: 0;
+			}
+			.viewAll {
+				display: block;
+				float: left;
+				width: 18px;
+				height: 18px;
+				margin: 22px 0 0 0;
+				background: url(assets/images/icon-sprite.svg) no-repeat -90px -20px;
+			}
+			.carey-estes-sticky-masthead  {
+				display: block;
+				float: left;
+				width: 60px;
+				margin: 0 24% 0 0;
+				.carey-estes-logo-white {
+					padding-top: 10px;
+				}
 			}
 		}
 	}
@@ -97,6 +115,7 @@ header {
 		.viewAll {
 			display: block;
 			float: left;
+			height: 27px;
 			padding: 0.5em 0.5em 0.5em 1.8em;
 			background: url(assets/images/icon-sprite.svg) no-repeat -90px 9px;
 			font-style: italic;
