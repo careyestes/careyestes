@@ -1291,6 +1291,19 @@ body.home .project-background-image img {
   text-align: center;
 }
 
+.single .aligncenter {
+  width: 100%;
+  margin: 0;
+}
+.single .aligncenter img {
+  width: 100%;
+  height: auto;
+}
+.single .wp-caption-text {
+  font-family: "Anonymous Pro", serif;
+  margin: 0;
+  text-align: left;
+}
 .single .nav-single {
   clear: both;
   font-size: 2em;
