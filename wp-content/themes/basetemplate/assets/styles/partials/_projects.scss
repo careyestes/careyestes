@@ -1,0 +1,36 @@
+.single {
+	.nav-single {
+		clear:both;
+		font-size: 2em;
+	}
+	.nav-previous {
+			position: fixed;
+			top: 50%;
+			left: 0;
+			a {
+				padding: 0.3em 0.2em 0.2em 0.2em;
+				border: 1px solid #ccc;
+				border-left: 0;
+				text-decoration: none;
+				color: $black;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+	}
+	.nav-next {
+			position: fixed;
+			top: 50%;
+			right: 0;
+			a {
+				padding: 0.3em 0.2em 0.2em 0.2em;
+				border: 1px solid #ccc;
+				border-right: 0;
+				text-decoration: none;
+				color: $black;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+	}
+}

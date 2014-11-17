@@ -751,7 +751,7 @@ address {
 }
 #page .wp-caption {
   border: 0;
-  border-bottom: 1px dotted #777777;
+  border-bottom: 1px dotted #777;
 }
 
 .content-area {
@@ -832,7 +832,7 @@ address {
 }
 
 header a, header a:visited, header a:hover {
-  color: #222222;
+  color: #222;
 }
 header h1 {
   font-family: "Anonymous Pro", serif;
@@ -865,7 +865,7 @@ header .carey-estes-masthead .carey-estes-logo {
   display: block;
   width: 100%;
   margin-top: 1.5em;
-  border-bottom: 1px dotted #777777;
+  border-bottom: 1px dotted #777;
   font-family: "Georgia", Times, serif;
 }
 .main-navigation .supersearch-button {
@@ -877,7 +877,7 @@ header .carey-estes-masthead .carey-estes-logo {
   font-family: "Georgia", Times, serif;
   font-style: italic;
   text-align: left;
-  color: #777777;
+  color: #777;
 }
 .main-navigation .pageNav {
   width: 53%;
@@ -896,12 +896,41 @@ header .carey-estes-masthead .carey-estes-logo {
   background: url(assets/images/icon-sprite.svg) no-repeat -90px 9px;
   font-style: italic;
   text-align: left;
-  color: #777777;
+  color: #777;
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
+footer {
+  width: 59%;
+  margin: 0 auto;
+  padding: 1em 0;
+  text-align: center;
+}
+footer a {
+  color: #222;
+  font-weight: bold;
+}
+footer .footerLogo {
+  width: 50px;
+  margin: 0 auto 0.8em;
+}
+footer .copyright {
+  text-align: center;
+}
+footer .contactInfo {
+  margin-bottom: 0.2em;
+  text-align: center;
+  font-size: 0.8em;
+}
+footer .site-info {
+  font-size: 0.65em;
+}
+footer .site-info p {
+  margin: 0;
+}
+
 /* ==========================================================================
    Posts and pages
    ========================================================================== */
@@ -1003,8 +1032,8 @@ body.home .wrapper a {
   display: block;
   margin-bottom: 2em;
   padding-bottom: 1em;
-  border-bottom: 1px dotted #777777;
-  color: #222222;
+  border-bottom: 1px dotted #777;
+  color: #222;
   text-decoration: none;
 }
 body.home .project-background-image {
@@ -1169,6 +1198,7 @@ body.home .project-background-image img {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
@@ -1259,4 +1289,39 @@ body.home .project-background-image img {
   margin: 0 auto;
   font-weight: bold;
   text-align: center;
+}
+
+.single .nav-single {
+  clear: both;
+  font-size: 2em;
+}
+.single .nav-previous {
+  position: fixed;
+  top: 50%;
+  left: 0;
+}
+.single .nav-previous a {
+  padding: 0.3em 0.2em 0.2em 0.2em;
+  border: 1px solid #ccc;
+  border-left: 0;
+  text-decoration: none;
+  color: #222;
+}
+.single .nav-previous a:hover {
+  text-decoration: none;
+}
+.single .nav-next {
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
+.single .nav-next a {
+  padding: 0.3em 0.2em 0.2em 0.2em;
+  border: 1px solid #ccc;
+  border-right: 0;
+  text-decoration: none;
+  color: #222;
+}
+.single .nav-next a:hover {
+  text-decoration: none;
 }

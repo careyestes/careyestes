@@ -2,5 +2,31 @@
    Footer
    ========================================================================== */
 
-.site-footer {
+footer {
+	width: 59%;
+	margin: 0 auto;
+	padding: 1em 0;
+	text-align: center;
+	a {
+		color: $black;
+		font-weight: bold;
+	}
+	.footerLogo {
+		width: 50px;
+		margin: 0 auto 0.8em;
+	}
+	.copyright {
+		text-align: center;
+	}
+	.contactInfo {
+		margin-bottom: 0.2em;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	.site-info {
+		font-size: 0.65em;
+		p {
+			margin: 0;
+		}
+	}
 }

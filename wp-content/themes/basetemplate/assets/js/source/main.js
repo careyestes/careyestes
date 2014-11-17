@@ -26,6 +26,9 @@ jQuery(document).ready(function($) {
       suggestion: Handlebars.compile('<a href="{{link}}" class="projectListItem"><span>{{title}}</span></a>')
     }
   });
+  superSearch.on('typeahead:selected', function($e, datum){
+        window.location=(datum["link"]);
+  });
 
   // Add modal for supersearch
   $( ".supersearch-button" ).click(function() {
