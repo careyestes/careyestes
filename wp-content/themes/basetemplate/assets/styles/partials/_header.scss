@@ -48,7 +48,7 @@
 				width: 60px;
 				margin: 0 24% 0 0;
 				.carey-estes-logo-white {
-					padding-top: 10px;
+					padding-top: 2px;
 				}
 			}
 		}
@@ -56,6 +56,9 @@
 }
 
 header {
+	@media only screen and (max-width: 767px) {
+		margin: 0 auto 0 65px;
+	}
 	a, a:visited, a:hover {
 		color: $black;
 	}
@@ -79,9 +82,24 @@ header {
 		margin: 0 auto;
 		text-align: center;
 		text-decoration: none;
+		@media only screen and (max-width: 767px) {
+			text-align: left;
+			@include clearfix();
+		}
 		.carey-estes-logo {
 			width: 66px;
 			height: 49px;
+			@media only screen and (max-width: 767px) {
+				float: left;
+				width: 50px;
+				margin-right: 4%;
+			}
+		}
+		hgroup {
+			@media only screen and (max-width: 767px) {
+				float: left;
+				font-size: 0.8em;
+			}
 		}
 	}
 }
@@ -93,6 +111,11 @@ header {
 	margin-top: 1.5em;
 	border-bottom: 1px dotted $grey;
 	font-family: $georgia;
+	@media only screen and (max-width: 767px) {
+		width: 90%;
+		margin: 10px auto;
+		padding-bottom: 10px;
+	}
 	.supersearch-button {
 		width: 100%;
 		padding: 0.5em 0.5em 0.5em 1.8em;
@@ -108,9 +131,21 @@ header {
 		width: 53%;
 		height: 38px;
 		margin: 0 auto;
+		@media only screen and (max-width: 767px) {
+			width: 50%;
+			height: 20px;
+		}
 		.supersearch-button {
 			width: 275px;
 			float: left;
+			@media only screen and (max-width: 767px) {
+				width: 35%;
+				height: 20px;
+				margin: 0 15% 0 0;
+				padding: 0;
+				background-position: right;
+				@include hideText();
+			}
 		}
 		.viewAll {
 			display: block;
@@ -121,6 +156,13 @@ header {
 			font-style: italic;
 			text-align: left;
 			color: $grey;
+			@media only screen and (max-width: 767px) {
+				width: 50%;
+				height: 20px;
+				padding: 0;
+				background-position: -90px 0;
+				@include hideText();
+			}
 		}
 	}
 }

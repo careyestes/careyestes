@@ -17,3 +17,9 @@
 	    clear: both;
 	}
 }
+
+@mixin hideText {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}

@@ -4,13 +4,26 @@
 #page {
 	max-width: $pageWidth;
 	margin: 20px auto;
+	@media only screen and (max-width: 767px) {
+		margin: 15px auto 0 auto;
+	}
 	.projectNav {
 		width: 24%;
 		float: left;
 		text-align: right;
 		padding-right: 1em;
+		@media only screen and (max-width: 767px) {
+			position: fixed;
+			top: 80px;
+			width: 63px;
+			font-size: 0.8em;
+			padding: 0;
+		}
 		h1 {
 			margin: 0;
+			@media only screen and (max-width: 767px) {
+				font-size: 1.1em;
+			}
 		}
 		h2 {
 			font-size: 1em;
@@ -21,20 +34,61 @@
 			margin: 0;
 			list-style: none;
 			font-size: 1.3em;
+			@media only screen and (max-width: 767px) {
+				padding: 0;
+				font-size: 1.2em;
+			}
 		}
 		a {
 			font-family: $georgia;
+			font-size: 0.8em;
 		}
 	}
 	.projectDescription {
 		float: left;
 		width: 70%;
+		@media only screen and (max-width: 767px) {
+			margin: 0 auto 0 77px;
+		}
 	}
 	.wp-caption {
 		border: 0;
 		border-bottom: 1px dotted $grey;
 	}
 }
+
+.projectNavFixed {
+	display: none;
+	position: fixed;
+	top: 85px;
+	width: 230px;
+	text-align: right;
+	h1 {
+		margin: 0;
+		@media only screen and (max-width: 767px) {
+			font-size: 1.1em;
+		}
+	}
+	h2 {
+		font-size: 1em;
+		font-style: italic;
+		margin-bottom: 1em;
+	}
+	ul {
+		margin: 0;
+		list-style: none;
+		font-size: 1.3em;
+		@media only screen and (max-width: 767px) {
+			padding: 0;
+			font-size: 1.2em;
+		}
+	}
+	a {
+		font-family: $georgia;
+		font-size: 0.8em;
+	}
+}
+
 .content-area {
 	float: left;
 	margin: 0 -25% 0 0;

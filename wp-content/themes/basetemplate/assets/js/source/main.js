@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+
   var url = objectUrl.themeUrl;
   // Init Typeahead
   var searchContent = new Bloodhound({
@@ -47,11 +48,38 @@ jQuery(document).ready(function($) {
     $('#'+thisId).fadeOut('fast');
   });
   // Add sticky header on scroll
-  $('.pageNav').waypoint(function() {
+  $('.wrapper').waypoint(function() {
     if ($(".stickyLogoHeader").is(":hidden")) {
       $(".stickyLogoHeader").slideDown(100);
     } else {
           $(".stickyLogoHeader").slideUp(100);
       }
   });
+
+  // Add project fixed sidenav
+  function activateFixedNav() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 500) {
+      $('.projectNavFixed').fadeIn(200);
+    } else {
+      $('.projectNavFixed').fadeOut(100);
+    }
+  }
+  $(window).scroll(function () {
+    var screenWidth = $(window).width();
+    if (screenWidth >= 768) {
+      activateFixedNav();
+    } else {
+      $('.projectNavFixed').css('display', 'none');
+    }
+  });
+
+  //Things to do on window resize
+  $(window).resize(function(){
+    var screenWidth = $(window).width();
+     if (screenWidth < 768) {
+      $('.projectNavFixed').css('display', 'none');
+     }
+  });
+
 });

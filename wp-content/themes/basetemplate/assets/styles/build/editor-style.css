@@ -1,3 +1,21 @@
 /* ==========================================================================
    Editor Styles
    ========================================================================== */
+/*
+ * Mixin for clearfix
+ * @include clearfix;
+*/
+img.size-large {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  clear: both;
+}
+
+.sectionBreak {
+  margin: 4em 0 5em;
+  border-top: 1px dotted;
+  outline: 0;
+}

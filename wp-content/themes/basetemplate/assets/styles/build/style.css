@@ -441,12 +441,12 @@ html {
  * Customize the background color to match your design.
  */
 ::-moz-selection {
-  background: orange;
+  background: #ccc;
   text-shadow: none;
 }
 
 ::selection {
-  background: orange;
+  background: #ccc;
   text-shadow: none;
 }
 
@@ -557,6 +557,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Georgia", Times, serif;
   font-weight: normal;
   clear: both;
+  outline: 0;
 }
 
 p {
@@ -565,11 +566,22 @@ p {
 }
 
 blockquote {
-  margin: 0 1.5em;
+  background: #eee;
+  margin: 1.5em;
+  padding: 1%;
+}
+blockquote p {
+  margin: 0;
 }
 
 address {
   margin: 0 0 1.5em;
+}
+
+.sectionBreak {
+  margin: 4em 0 5em;
+  border-top: 1px dotted;
+  outline: 0;
 }
 
 /* ==========================================================================
@@ -723,14 +735,33 @@ address {
   max-width: 1024px;
   margin: 20px auto;
 }
+@media only screen and (max-width: 767px) {
+  #page {
+    margin: 15px auto 0 auto;
+  }
+}
 #page .projectNav {
   width: 24%;
   float: left;
   text-align: right;
   padding-right: 1em;
 }
+@media only screen and (max-width: 767px) {
+  #page .projectNav {
+    position: fixed;
+    top: 80px;
+    width: 63px;
+    font-size: 0.8em;
+    padding: 0;
+  }
+}
 #page .projectNav h1 {
   margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  #page .projectNav h1 {
+    font-size: 1.1em;
+  }
 }
 #page .projectNav h2 {
   font-size: 1em;
@@ -742,16 +773,64 @@ address {
   list-style: none;
   font-size: 1.3em;
 }
+@media only screen and (max-width: 767px) {
+  #page .projectNav ul {
+    padding: 0;
+    font-size: 1.2em;
+  }
+}
 #page .projectNav a {
   font-family: "Georgia", Times, serif;
+  font-size: 0.8em;
 }
 #page .projectDescription {
   float: left;
   width: 70%;
 }
+@media only screen and (max-width: 767px) {
+  #page .projectDescription {
+    margin: 0 auto 0 77px;
+  }
+}
 #page .wp-caption {
   border: 0;
   border-bottom: 1px dotted #777;
+}
+
+.projectNavFixed {
+  display: none;
+  position: fixed;
+  top: 85px;
+  width: 230px;
+  text-align: right;
+}
+.projectNavFixed h1 {
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  .projectNavFixed h1 {
+    font-size: 1.1em;
+  }
+}
+.projectNavFixed h2 {
+  font-size: 1em;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+.projectNavFixed ul {
+  margin: 0;
+  list-style: none;
+  font-size: 1.3em;
+}
+@media only screen and (max-width: 767px) {
+  .projectNavFixed ul {
+    padding: 0;
+    font-size: 1.2em;
+  }
+}
+.projectNavFixed a {
+  font-family: "Georgia", Times, serif;
+  font-size: 0.8em;
 }
 
 .content-area {
@@ -828,9 +907,14 @@ address {
   margin: 0 24% 0 0;
 }
 .projectStickyHeader .stickyLogoHeader .stickyNav .carey-estes-sticky-masthead .carey-estes-logo-white {
-  padding-top: 10px;
+  padding-top: 2px;
 }
 
+@media only screen and (max-width: 767px) {
+  header {
+    margin: 0 auto 0 65px;
+  }
+}
 header a, header a:visited, header a:hover {
   color: #222;
 }
@@ -855,9 +939,36 @@ header .carey-estes-masthead {
   text-align: center;
   text-decoration: none;
 }
+@media only screen and (max-width: 767px) {
+  header .carey-estes-masthead {
+    text-align: left;
+  }
+  header .carey-estes-masthead:before, header .carey-estes-masthead:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  header .carey-estes-masthead:after {
+    clear: both;
+  }
+}
 header .carey-estes-masthead .carey-estes-logo {
   width: 66px;
   height: 49px;
+}
+@media only screen and (max-width: 767px) {
+  header .carey-estes-masthead .carey-estes-logo {
+    float: left;
+    width: 50px;
+    margin-right: 4%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header .carey-estes-masthead hgroup {
+    float: left;
+    font-size: 0.8em;
+  }
 }
 
 .main-navigation {
@@ -867,6 +978,13 @@ header .carey-estes-masthead .carey-estes-logo {
   margin-top: 1.5em;
   border-bottom: 1px dotted #777;
   font-family: "Georgia", Times, serif;
+}
+@media only screen and (max-width: 767px) {
+  .main-navigation {
+    width: 90%;
+    margin: 10px auto;
+    padding-bottom: 10px;
+  }
 }
 .main-navigation .supersearch-button {
   width: 100%;
@@ -884,9 +1002,27 @@ header .carey-estes-masthead .carey-estes-logo {
   height: 38px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 767px) {
+  .main-navigation .pageNav {
+    width: 50%;
+    height: 20px;
+  }
+}
 .main-navigation .pageNav .supersearch-button {
   width: 275px;
   float: left;
+}
+@media only screen and (max-width: 767px) {
+  .main-navigation .pageNav .supersearch-button {
+    width: 35%;
+    height: 20px;
+    margin: 0 15% 0 0;
+    padding: 0;
+    background-position: right;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
 .main-navigation .pageNav .viewAll {
   display: block;
@@ -897,6 +1033,17 @@ header .carey-estes-masthead .carey-estes-logo {
   font-style: italic;
   text-align: left;
   color: #777;
+}
+@media only screen and (max-width: 767px) {
+  .main-navigation .pageNav .viewAll {
+    width: 50%;
+    height: 20px;
+    padding: 0;
+    background-position: -90px 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
 
 /* ==========================================================================
@@ -1291,15 +1438,22 @@ body.home .project-background-image img {
   text-align: center;
 }
 
-.single .aligncenter {
-  width: 100%;
-  margin: 0;
+.single .entry-content h2 {
+  font-size: 2em;
 }
-.single .aligncenter img {
+.single .entry-content h4 {
+  margin: 0.2em 0 0.5em 0;
+  font-size: 1.5em;
+  font-style: italic;
+}
+.single .entry-content .aligncenter {
+  margin: 0 auto;
+}
+.single .entry-content .aligncenter img {
   width: 100%;
   height: auto;
 }
-.single .wp-caption-text {
+.single .entry-content .wp-caption-text {
   font-family: "Anonymous Pro", serif;
   margin: 0;
   text-align: left;

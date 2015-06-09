@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $georgia;
 	font-weight: normal;
 	clear: both;
+	outline: 0;
 }
 
 p {
@@ -72,11 +73,22 @@ p {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	background: $lightGrey;
+	margin: 1.5em;
+	padding: 1%;
+	p {
+		margin: 0;
+	}
 }
 
 address {
 	margin: 0 0 1.5em;
+}
+
+.sectionBreak {
+	margin: 4em 0 5em;
+	border-top: 1px dotted;
+	outline: 0;
 }
 
 

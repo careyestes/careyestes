@@ -34,6 +34,7 @@
 <style type="text/css">
   .projectDescription a {
   	color: <?php echo $thisProjectColor; ?>;
+  	
   }
 </style>
 </head>
