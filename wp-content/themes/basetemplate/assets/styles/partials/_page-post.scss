@@ -1,6 +1,28 @@
 /* ==========================================================================
    Posts and pages
    ========================================================================== */
+body.page {
+	.main-navigation {
+		width: 320px;
+		margin: 1.5em auto;
+	}
+	.wrapper {
+		width: 60%;
+		margin: 0 auto;
+		a {
+			color: #32a7b5;
+		}
+		.entry-content {
+			h2 {
+				margin: 1em 0;
+				font-size: 1.6em;
+			}
+			h4 {
+				font-weight: 700;
+			}
+		}
+	}
+}
 
 .sticky {
 }

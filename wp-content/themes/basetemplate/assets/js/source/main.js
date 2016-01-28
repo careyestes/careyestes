@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
   $('.searchCloseButton').click(function() {
     $('.supersearchOverlay').fadeOut('fast');
   });
+
   // Add hover state for homepage tiles
   $('.projectTile').hover(function() {
     var thisId = $(this).attr('class').split(' ').pop();
@@ -55,6 +56,20 @@ jQuery(document).ready(function($) {
           $(".stickyLogoHeader").slideUp(100);
       }
   });
+
+  $('.supersearchOverlay').bind('keydown', function(event) {
+      switch(event.which){
+        case 27: // esc
+          setTimeout(function() { 
+            if($('.supersearchOverlay').is(':visible')) {
+              $('.supersearchOverlay').fadeOut('fast');
+            }
+
+          }, 20);
+        break;
+
+      }
+    });
 
   // Add project fixed sidenav
   function activateFixedNav() {

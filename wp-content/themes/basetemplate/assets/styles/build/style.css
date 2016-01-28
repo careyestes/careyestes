@@ -1081,6 +1081,25 @@ footer .site-info p {
 /* ==========================================================================
    Posts and pages
    ========================================================================== */
+body.page .main-navigation {
+  width: 320px;
+  margin: 1.5em auto;
+}
+body.page .wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+body.page .wrapper a {
+  color: #32a7b5;
+}
+body.page .wrapper .entry-content h2 {
+  margin: 1em 0;
+  font-size: 1.6em;
+}
+body.page .wrapper .entry-content h4 {
+  font-weight: 700;
+}
+
 .hentry {
   margin: 0 0 1.5em;
 }
@@ -1484,7 +1503,7 @@ body.home .project-background-image img {
   right: 0;
 }
 .single .nav-next a {
-  padding: 0.3em 0.2em 0.2em 0.2em;
+  padding: 0 0.2em 0.1em 0.2em;
   background: #fff;
   border: 1px solid #ccc;
   border-right: 0;
