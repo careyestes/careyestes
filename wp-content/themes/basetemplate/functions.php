@@ -1,5 +1,5 @@
 <?php
-
+// Here are the functions ::dev
 require_once('admin/settings.php');
 require_once('admin/enqueueStylesAndScripts.php');
 require_once('admin/customizer.php');
